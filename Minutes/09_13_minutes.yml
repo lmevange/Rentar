@@ -1,0 +1,17 @@
+date: September 13, 2016
+meeting_type: ta
+attendance: [<mmfraser>, <grlandon>, <lmevange>, <jacascio>]
+absent: []
+excused_absences: [ # Any legitamite excuses for absent team members
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: Brainstormed ideas on what we should do and tools we should utilize. Spoke about ideas for sprint 1},
+  {ubit: <jacascio>, progress: Set up Git, talked about framework decisions.},
+  {ubit: <lmrvange>, progress: Created git repo, discussed frameworks, probably using Django and bootstrap},
+  {ubit: <grlandon>, progress: Joined git repo, looked into which framework that we will use},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <jacascio>, issue: Greg smells bad.},
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  Choose a framework by weekend, get a minimum viable product. Youtube video this weekend.

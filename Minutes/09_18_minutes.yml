@@ -1,17 +1,17 @@
-date: September 13, 2016
-meeting_type: ta
+date: September 18, 2016
+meeting_type: group
 attendance: [<mmfraser>, <grlandon>, <lmevange>, <jacascio>]
 absent: []
 excused_absences: [ # Any legitamite excuses for absent team members
   ]
 task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
-  {ubit: <mmfraser>, progress: Brainstormed ideas on what we should do and tools we should utilize. Spoke about ideas for sprint 1},
-  {ubit: <jacascio>, progress: Set up Git, talked about framework decisions.},
-  {ubit: <lmrvange>, progress: Created git repo, discussed frameworks, probably using Django and bootstrap},
-  {ubit: <grlandon>, progress: Joined git repo, looked into which framework that we will use},
+  {ubit: <mmfraser>, progress: Started to fix team members CSS problems, learned how to use git more},
+  {ubit: <jacascio>, progress: Set up Git, talked about framework decisions, pushed meeting minutes from last time, linked current page with nav bar.},
+  {ubit: <lmrvange>, progress: created a bare bones version of the website as a group, one thing that stuck out to me for us to finish for sprint to is the google uto complete api stuff},
+  {ubit: <grlandon>, progress: started to figure out how to use the google API for getting google maps info as well as working out the kinks in html css javascript and bootstrap},
   ]
 issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
-  {ubit: <jacascio>, issue: Greg smells bad.},
+  {ubit: <grlandon>, issue: figuring out how to use bootstrap and css and file organization and structure},
   ]
 Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
-  Choose a framework by weekend, get a minimum viable product. Youtube video this weekend.
+  seperate CSS HTML JavaScript into seperate file for better readability. Continue adding functionability to what is already implemented make the page styling better

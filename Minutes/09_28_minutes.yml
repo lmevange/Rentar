@@ -1,0 +1,17 @@
+date: September 13, 2016
+meeting_type: group
+attendance: [<mmfraser>, <grlandon>, <lmevange>, <jacascio>]
+absent: []
+excused_absences: [ # Any legitamite excuses for absent team members
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: Disscused what has to be done on ther front end with Greg. Drew out ratings page},
+  {ubit: <jacascio>, progress: Set up Django and started hosting the website on droplett},
+  {ubit: <lmevange>, progress: Trying to find out how to connect github to our server},
+  {ubit: <grlandon>, progress: drew out ratings page with malcom and set up a list of the front end goals for sprint 3},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <jacascio>, issue: Schedule planning, greg still smells},
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  Connect github to server. Finish Auto complete for google maps and create a review page.

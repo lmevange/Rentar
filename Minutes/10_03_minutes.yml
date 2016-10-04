@@ -1,0 +1,21 @@
+date: October 03, 2016
+meeting_type: group
+attendance: [<grlandon>, <lmevange>, <jacascio>, <mmfraser>]
+absent: []
+excused_absences: [
+
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: More page design, started a ratings},
+  {ubit: <jacascio>, progress: began merging git to server},
+  {ubit: <lmevange>, progress: created database branch and did a bit of database work},
+  {ubit: <grlandon>, progress: Started making the ratings page and created rating page branch},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <jacascio>, issue: Finish server work, proving a bit more difficult than expected},
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  database work
+  get front end template
+  made questions for meeting
+

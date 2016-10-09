@@ -1,0 +1,188 @@
+</!DOCTYPE html>
+<html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>this is the ratings for page for individual section</title>
+    <!--<link rel='stylesheet' href='css/style.css'>
+-->
+</head>
+
+<body>
+<!--  this is the logo and navigation bar -->
+<div class="container-fluid">
+    <div class="page-header">
+        <center><img src="../images/fakelogo.png" width="500" height="200" alt="logo"/></center>
+    </div>
+</div>
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="../../index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="apt_sectional_ratings.html">Ratings</a></li>
+                <li><a href="address-view.html">Address</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!--
+using css inside the html for now will convert to 
+bootstrap later, this is just for personal convience 
+right now
+-->
+<!--
+this is going to have the catogories for the ratings
+such as  bedroom , bathroom, kitchen, livingroom, dining room
+-->
+<!--
+the style tages for the 
+css that should be in another file but
+is here util i figure out how to use the 
+star system the right way
+-->
+<style>
+    .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        text-align: center;
+    }
+
+    .rating > span {
+        display: inline-block;
+        position: relative;
+        width: 1.1em;
+    }
+
+    .rating > *:hover,
+    .rating > *:hover ~ span,
+    .rating:not(:hover) > input:checked ~ span {
+        color: transparent;
+    }
+
+    .rating > *:hover:before,
+    .rating > *:hover ~ span:before,
+    .rating:not(:hover) > input:checked ~ span:before {
+        content: "\2605";
+        position: absolute;
+        left: 0;
+        color: gold;
+    }
+
+    .rating > input {
+        margin-left: -1.1em;
+        margin-right: 0;
+        top: 3px;
+        width: 1.1em;
+        height: 1.1em;
+        position: relative;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    body {
+        padding: 100px;
+    }
+</style>
+
+<section>
+    <div class="bedroom">
+        <center>
+            <h1>
+                Bedroom
+            </h1>
+        </center>
+        <div class="rating">
+            <input name="myrating1" type="radio" value="5"/><span>☆</span>
+            <input name="myrating1" type="radio" value="4"/><span>☆</span>
+            <input name="myrating1" type="radio" value="3"/><span>☆</span>
+            <input name="myrating1" type="radio" value="2"/><span>☆</span>
+            <input name="myrating1" type="radio" value="1"/><span>☆</span>
+        </div>
+    </div>
+    <div class="livingroom">
+        <center>
+            <h1>
+                Living room
+            </h1>
+        </center>
+        <div id="page-wrap">
+            <div class="rating">
+                <input name="myrating2" type="radio" value="5"/><span>☆</span>
+                <input name="myrating2" type="radio" value="4"/><span>☆</span>
+                <input name="myrating2" type="radio" value="3"/><span>☆</span>
+                <input name="myrating2" type="radio" value="2"/><span>☆</span>
+                <input name="myrating2" type="radio" value="1"/><span>☆</span>
+            </div>
+        </div>
+    </div>
+    <div class="kitchen">
+        <center>
+            <h1>
+                Kitchen
+            </h1>
+        </center>
+        <div id="page-wrap">
+            <div class="rating">
+                <input name="myrating3" type="radio" value="5"/><span>☆</span>
+                <input name="myrating3" type="radio" value="4"/><span>☆</span>
+                <input name="myrating3" type="radio" value="3"/><span>☆</span>
+                <input name="myrating3" type="radio" value="2"/><span>☆</span>
+                <input name="myrating3" type="radio" value="1"/><span>☆</span>
+            </div>
+        </div>
+    </div>
+    <div class="bathroom">
+        <center>
+            <h1>
+                Bathroom
+            </h1>
+        </center>
+        <div id="page-wrap">
+            <div class="rating">
+                <input name="myrating4" type="radio" value="5"/><span>☆</span>
+                <input name="myrating4" type="radio" value="4"/><span>☆</span>
+                <input name="myrating4" type="radio" value="3"/><span>☆</span>
+                <input name="myrating4" type="radio" value="2"/><span>☆</span>
+                <input name="myrating4" type="radio" value="1"/><span>☆</span>
+            </div>
+        </div>
+    </div>
+    <div class="diningroom">
+        <center>
+            <h1>
+                Dining room
+            </h1>
+        </center>
+        <div id="page-wrap">
+            <div class="rating">
+                <input name="myrating5" type="radio" value="5"/><span>☆</span>
+                <input name="myrating5" type="radio" value="4"/><span>☆</span>
+                <input name="myrating5" type="radio" value="3"/><span>☆</span>
+                <input name="myrating5" type="radio" value="2"/><span>☆</span>
+                <input name="myrating5" type="radio" value="1"/><span>☆</span>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <center>
+        <form action="opinion_form.html">
+            <input type="submit">
+        </form>
+    </center>
+    <br>
+</section>
+</body>
+
+</html>

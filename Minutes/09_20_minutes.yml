@@ -5,17 +5,10 @@ absent: []
 excused_absences: [ # Any legitamite excuses for absent team members
 {ubit: <grlandon>, : reason: Work during meeting, should be fixed after this one]
 task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
-<<<<<<< HEAD
-  {ubit: <mmfraser>, progress: Started looking into database possibilities for user profiling.},
-  {ubit: <jacascio>, progress: Finished sprint one, looked into django},
-  {ubit: <lmrvange>, progress: decided on someback end functions and how we will implement aka django and some database framework},
-  {ubit: <grlandon>, progress: Looked into the googlemaps api}
-=======
   {ubit: <mmfraser>, progress: },
   {ubit: <jacascio>, progress: Finished sprint one, },
   {ubit: <lmrvange>, progress: created a bare bones version of the website as a group, one thing that stuck out to me for us to finish for sprint to is the google uto complete api stuff},
   {ubit: <grlandon>, progress: Setup prototype, finished
->>>>>>> parent of 673167c... 09_20_minutes updated
   ]
 issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
   {ubit: <grlandon>, issue: googlemaps search bar not working},

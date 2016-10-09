@@ -1,4 +1,4 @@
-#!/home/dev/Rentar/venv/bin/python
+#!/home/devl/Rentar/venv/bin/python
 
 import sys
 import getopt

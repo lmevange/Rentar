@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+</!DOCTYPE html>
+<html>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -7,10 +8,13 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact Us</title>
+<meta charset= "UTF-8"/>
+<title>input form</title>
+
 </head>
+
 <body>
+<!--  this is the logo and navigation bar -->
 <div class="container-fluid">
     <div class="page-header">
         <center><img src="../images/fakelogo.png" width="500" height="200" alt="logo"/></center>
@@ -29,6 +33,41 @@
         </div>
     </nav>
 </div>
-<center><img src="../images/Raptar.png" width="500" height="200" alt="logo"/></center>
+
+
+<center>
+<h1>Enter the property information here!</h1>
+</center>
+
+<center>
+<form>
+Address:<br>
+<input type="text" name="address"><br>
+City:<br>
+<input type="text" name="city"><br>
+State:<br>
+<input type="text" name="state"><br>
+Monthly payment:<br>
+<input type="number" name="monthly rent"><br>
+Security Deposit:<br>
+<input type="number" name="security deposit"><br>
+<br>
+<p>
+Enter your opinion about the property here!
+</p>
+<textarea rows="8" cols="50" name="comments" form="usrform">
+Text...</textarea> 
+<br>
+<input type="submit">
+
+</form>
+</center>
 </body>
+<footer>
+<center>
+<h5> By Rental raters<h5>
+</center>
+</footer>
+
+
 </html>

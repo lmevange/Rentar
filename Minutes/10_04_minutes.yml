@@ -1,0 +1,21 @@
+date: October 04, 2016
+meeting_type: instructor
+attendance: [<grlandon>, <lmevange>, <jacascio>, <mmfraser>]
+absent: []
+excused_absences: [
+
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: bootstrap integration},
+  {ubit: <jacascio>, progress: database manegment and templates},
+  {ubit: <lmevange>, progress: solidify backend especially git to server },
+  {ubit: <grlandon>, progress: re do the web pages to integrate bootstrap django},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <lmevange>, issue: Still need to get our old webpage to display on the server web page},
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  Disscussed what features we plan on having
+  how landlords are able to contribute
+  Get class to input real data for community points
+

@@ -1,0 +1,22 @@
+date: September 29, 2016
+meeting_type: ta
+attendance: [<grlandon>, <lmevange>, <jacascio>]
+absent: []
+excused_absences: [
+  {ubit: <mmfraser>, : reason: Class}
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: More page design, assigned tasks},
+  {ubit: <jacascio>, progress: Broke into a frontend and backend group},
+  {ubit: <lmevange>, progress: moved forword on connecting git to server},
+  {ubit: <grlandon>, progress: restructure my git end for proper branching, begin to integrate bootstrap into html pages},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <jacascio>, issue: Finish features, use proper version control},
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  Connect github to server.
+  Finish Auto complete for google maps.
+  Create a review page.
+  Update webpage look.
+  Setup database.

@@ -11,7 +11,9 @@ task_progress: [ # All group members must be included here even if they haven't 
   {ubit: <grlandon>, progress: Setup prototype, finished
   ]
 issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
-  {ubit: <grlandon>, issue: },
+  {ubit: <grlandon>, issue: googlemaps search bar not working},
   ]
 Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
   Ask about getting user data from classmates
+  choose database
+  work on backend

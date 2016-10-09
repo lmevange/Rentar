@@ -1,0 +1,17 @@
+date: October 08, 2016
+meeting_type: group
+attendance: [<grlandon>, <lmevange>, <jacascio>, <mmfraser>]
+absent: []
+excused_absences: [
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: reviewed 5 star rating system with greg, fixed radio buttons},
+  {ubit: <jacascio>, progress: helped Leo do database work, merges server branch to develop},
+  {ubit: <lmevange>, progress: Tried to use a postgres DB but ran into to many problems so will oribably revert back to sqlite and try using postgres again later},
+  {ubit: <grlandon>, progress: was able to resize and improve 5 star rating system},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <lmevange>, issue: Had to ditch postgres because of unforseen errors, going back to sqllite 3 for this sprint}
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  reaverting to django pages and postgres for Sprint 3 hopefully

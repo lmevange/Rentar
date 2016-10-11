@@ -1,0 +1,17 @@
+date: October 11, 2016
+meeting_type: ta
+attendance: [<grlandon>, <lmevange>, <jacascio>, <mmfraser>]
+absent: []
+excused_absences: [
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: Disscussed stage 3 front end, new fresh look to the site},
+  {ubit: <jacascio>, progress: when django is fixed link it to server},
+  {ubit: <lmevange>, progress: Try switching to postgres soon as possible},
+  {ubit: <grlandon>, progress: convert to django asap, prob this weekend},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <lmevange>, issue: mah boy joe cashonly}
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  Start on sprint 3 asap

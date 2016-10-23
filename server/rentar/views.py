@@ -14,3 +14,5 @@ def addressview(request):
 def contact(request):
 	return render(request, 'contact.html')
 
+def rating(request):
+	return render(request,'rating.html')

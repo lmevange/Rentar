@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.forms import ModelForm
-import ApartmentForm
+import rentar.models
 
 # Create your views here.
 def index(request):

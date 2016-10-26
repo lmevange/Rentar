@@ -51,7 +51,7 @@ class Landlord(models.Model):
 	company = models.CharField(max_length=200)
 	def __str__(self):
 	   return self.last_name
-	
+
 class Apartment_Rating(models.Model):
 	#info on rent
 	apartment = models.Foreignkey(Apartment, on_delete=models.CASCADE) #if apartment is deleted delete this too
@@ -75,9 +75,8 @@ class Apartment_Rating(models.Model):
 	#changed from privacy
 	neighborhood = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
 	location = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
-	maintenance = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
 	landlord = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
-	comment = models.TextField(max_length = 2000)
+	comment = models.TextField(max_length = 400)
 	def __str__(self):
 	   return "Rating: " +id +" for " + apartment
 
@@ -90,5 +89,6 @@ class Landlord_Rating(models.Model)
 	responsiveness = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
 	maintenance= models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
 	likeability = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
+	comment = models.TextField(max_length = 400)
 	def __str__(self):
 	   return "Rating: " +id +" for " + landlord

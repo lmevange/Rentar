@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.forms import ApartmentForm
 
 # Create your views here.
 def index(request):
@@ -16,3 +16,19 @@ def contact(request):
 
 def rating(request):
 	return render(request,'rating.html')
+
+def add_apartment (request):
+	context = RequestContext(request)
+
+	if request.method == 'POST':
+		form = ApartmentForm(request.POST)
+
+		if form.is_valid():
+			form.save(commit = True)
+			return index(request)
+		else:
+			print form.errors
+	else:
+		form = ApartmentForm()
+
+	return render_to_response('add_apartment.html', {'form':form}, context)

@@ -27,7 +27,7 @@ def add_apartment (request):
 			form.save(commit = True)
 			return index(request)
 		else:
-			print form.errors
+			print form.errors()
 	else:
 		form = ApartmentForm()
 

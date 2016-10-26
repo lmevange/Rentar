@@ -46,18 +46,17 @@ class Apartment(models.Model):
 ##################
 
 class Landlord(models.Model):
-	#id_auto_inc = models.AutoField(primary_key =True)
 	first_name = models.CharField(max_length=200)
 	last_name = models.CharField(max_length=200)
 	company = models.CharField(max_length=200)
 	def __str__(self):
-	   return self.name_text
+	   return self.last_name
 	
 class Apartment_Rating(models.Model):
-	#id_auto_inc = models.AutoField(primary_key =True)
 	#info on rent
 	apartment = models.Foreignkey(Apartment, on_delete=models.CASCADE) #if apartment is deleted delete this too
 	landlord = models.Foreignkey(Landlord)
+
 	move_in_date = models.DateField()
 	years_lived = models.PositiveSmallIntegerField(default=1)
 	#costs
@@ -73,8 +72,23 @@ class Apartment_Rating(models.Model):
 	garbage = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
 	#general
 	parking = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
-	privacy = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
+	#changed from privacy
+	neighborhood = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
 	location = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
 	maintenance = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
 	landlord = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
 	comment = models.TextField(max_length = 2000)
+	def __str__(self):
+	   return "Rating: " +id +" for " + apartment
+
+class Landlord_Rating(models.Model)
+	landlord = models.Foreignkey(Landlord, on_delete=models.CASCADE)
+	apartment = models.Foreignkey(Apartment)
+	#ratings
+	hot = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
+	privacy = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
+	responsiveness = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
+	maintenance= models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
+	likeability = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
+	def __str__(self):
+	   return "Rating: " +id +" for " + landlord

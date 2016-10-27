@@ -1,5 +1,12 @@
 from django.db import models
 
+class Landlord(models.Model):
+	first_name = models.CharField(default="John", max_length=200)
+	last_name = models.CharField(default="Doe", max_length=200)
+	company = models.CharField(max_length=200)
+	def __str__(self):
+	   return self.last_name
+
 class Apartment(models.Model):
 	#location info
 	address_full = models.CharField(max_length=250,primary_key=True)
@@ -29,11 +36,11 @@ class Apartment(models.Model):
 	#public transportation
 	public_transportation= models.BooleanField(default=False)
 	#pets later add average fees
-	pets = models.booleanField(default=False)
+	pets = models.BooleanField(default=False)
 	#landlord info
-	landlord = models.Foreignkey(LandLord) #should only have one
+	landlord = models.ForeignKey(Landlord) #should only have one
 	#rating info
-	ratings = models.ManyToManyField(Apartment_Ratings)
+	#ratings = models.ManyToManyField(Apartment_Ratings)
 
 	avg_security_deposit = models.DecimalField(max_digits=5, decimal_places=2)
 	avg_rent = models.DecimalField(max_digits=6, decimal_places=2)
@@ -44,18 +51,10 @@ class Apartment(models.Model):
 ##################
 #id with auto inc is set as primary key automatically for all tables
 ##################
-
-class Landlord(models.Model):
-	first_name = models.CharField(max_length=200)
-	last_name = models.CharField(max_length=200)
-	company = models.CharField(max_length=200)
-	def __str__(self):
-	   return self.last_name
-
 class Apartment_Rating(models.Model):
 	#info on rent
-	apartment = models.Foreignkey(Apartment, on_delete=models.CASCADE) #if apartment is deleted delete this too
-	landlord = models.Foreignkey(Landlord)
+	apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE) #if apartment is deleted delete this too
+	landlord = models.ForeignKey(Landlord)
 
 	move_in_date = models.DateField()
 	years_lived = models.PositiveSmallIntegerField(default=1)
@@ -66,23 +65,23 @@ class Apartment_Rating(models.Model):
 	pet_fee = models.DecimalField(max_digits=5, decimal_places=2, default= 0)
 	#ratings
 	#utilities:
-	water = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
-	heat = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
-	electric = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
-	garbage = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
+	water = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	heat = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	electric = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	garbage = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	#general
-	parking = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
+	parking = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	#changed from privacy
-	neighborhood = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
-	location = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
-	landlord = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
+	neighborhood = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	location = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	landlord = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	comment = models.TextField(max_length = 400)
 	def __str__(self):
 	   return "Rating: " +id +" for " + apartment
 
-class Landlord_Rating(models.Model)
-	landlord = models.Foreignkey(Landlord, on_delete=models.CASCADE)
-	apartment = models.Foreignkey(Apartment)
+class Landlord_Rating(models.Model):
+	landlord = models.ForeignKey(Landlord, on_delete=models.CASCADE)
+	apartment = models.ForeignKey(Apartment)
 	#ratings
 	hot = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)
 	privacy = models.IntegerField(choices=[(i, i) for i in range(1, 5)], blank=True)

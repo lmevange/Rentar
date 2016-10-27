@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.template import RequestContext
 from django.forms import ModelForm
-import rentar.models
+from rentar.forms import ApartmentForm, LandlordForm
 
 # Create your views here.
 def index(request):
@@ -32,4 +34,4 @@ def add_apartment (request):
 	else:
 		form = ApartmentForm()
 
-	return render_to_response('add_apartment.html', {'form':form}, context)
+	return render(request,'add_apartment.html', {'form':form})

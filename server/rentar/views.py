@@ -50,7 +50,7 @@ def add_landlord(request):
 	else:
 		form = LandlordForm()
 
-	return render(request,'add_apartment.html', {'form':form})
+	return render(request,'add_landlord.html', {'form':form})
 
 def add_apartment_rating(request):
 	context = RequestContext(request)
@@ -66,7 +66,7 @@ def add_apartment_rating(request):
 	else:
 		form = ApartmentRatingForm()
 
-	return render(request,'add_apartment.html', {'form':form}) #change name of html after merging maybe
+	return render(request,'add_apartment_rating.html', {'form':form}) #change name of html after merging maybe
 
 def add_landlord_rating(request):
 	context = RequestContext(request)
@@ -82,4 +82,4 @@ def add_landlord_rating(request):
 	else:
 		form = LandlordRatingForm()
 
-	return render(request,'add_apartment.html', {'form':form}) #change name of html after merging maybe
+	return render(request,'add_landlord_rating.html', {'form':form}) #change name of html after merging maybe

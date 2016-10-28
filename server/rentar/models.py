@@ -3,7 +3,7 @@ from django.db import models
 class Landlord(models.Model):
 	first_name = models.CharField(default="", max_length=200)
 	last_name = models.CharField(default="", max_length=200)
-	company = models.CharField(max_length=200)
+	company = models.CharField(default = "", max_length=200)
 	def __str__(self):
 	   return self.last_name
 
@@ -46,7 +46,7 @@ class Apartment(models.Model):
 	avg_rent = models.DecimalField(default=0,max_digits=6, decimal_places=2)
 
 	def __str__(self):
-	   return self.address_full
+	   return self.address_line
 
 ##################
 #id with auto inc is set as primary key automatically for all tables
@@ -62,7 +62,7 @@ class Apartment_Rating(models.Model):
 	starting_rent = models.DecimalField(default=0, max_digits=5, decimal_places=2)
 	ending_rent = models.DecimalField(default=0, max_digits=5, decimal_places=2)
 	security_deposit = models.DecimalField(default=0,max_digits=5, decimal_places=2)
-	pet_fee = models.DecimalField(default=0, max_digits=5, decimal_places=2, default= 0)
+	pet_fee = models.DecimalField(default=0, max_digits=5, decimal_places=2)
 	#ratings
 	#utilities:default=0, 
 	water = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)

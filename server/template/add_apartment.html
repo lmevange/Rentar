@@ -7,26 +7,21 @@
     <body>
         <h1>Add a Apartment</h1>
 
-        <form id="apartment_form" method="post" action = "/"/>
+        <form id="apartment_form" method="POST" action = "/add_apartment/"/><!-- for some reason this action is needed. makes url weird, but it posts to database-->
 
             {% csrf_token %}
             <!-- {% for hidden in form.hidden_fields %}
                 {{ hidden }}
             {% endfor %} -->
 
-            <!-- {% for field in form.visible_fields %}
+            {% for field in form.visible_fields %}
                 {{ field.errors }}
+		{{ field.label_tag }}
                 {{ field.help_text }}
                 {{ field }}
-            {% endfor %} -->
-            <p><label for="address_text">Adrress:</label>
-    			<input id="address_text" type="text"></p>
-			<p><label for="years_lived">Years Lived:</label>
-    			<input id="years_lived" type="text"></p>
-			<p><label for="security_deposit">Security Deposit:</label>
-    			<input id="security_deposit" type="number"></p>
-            <input type="submit" name="submit" value="Create Apartment"/>
-        </form>
+            {% endfor %}
+	    <input type="submit" name="submit" value="Add Apartment"/>
+	</form>
     </body>
 
 </html>

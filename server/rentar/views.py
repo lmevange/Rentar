@@ -44,7 +44,7 @@ def add_landlord(request):
 
 		if form.is_valid():
 			form.save(commit = True)
-			return add_landlord_rating(request)
+			return index(request)
 		else:
 			print (form.errors)
 	else:
@@ -60,7 +60,7 @@ def add_apartment_rating(request):
 
 		if form.is_valid():
 			form.save(commit = True)
-			return add_landlord(request)
+			return index(request)
 		else:
 			print (form.errors)
 	else:
@@ -76,7 +76,7 @@ def add_landlord_rating(request):
 
 		if form.is_valid():
 			form.save(commit = True)
-			return index(request)
+			return add_apartment(request)
 		else:
 			print (form.errors)
 	else:

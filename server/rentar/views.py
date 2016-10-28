@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import RequestContext
+from django.forms import ModelForm
+from rentar.forms import ApartmentForm, LandlordForm
 
 # Create your views here.
 def index(request):
@@ -16,3 +19,67 @@ def contact(request):
 
 def rating(request):
 	return render(request,'rating.html')
+
+def add_apartment(request):
+	context = RequestContext(request)
+
+	if request.method == 'POST':
+		form = ApartmentForm(request.POST)
+
+		if form.is_valid():
+			form.save(commit = True)
+			return add_apartment_rating(request)
+		else:
+			print (form.errors)
+	else:
+		form = ApartmentForm()
+
+	return render(request,'add_apartment.html', {'form':form})
+
+def add_landlord(request):
+	context = RequestContext(request)
+
+	if request.method == 'POST':
+		form = LandlordForm(request.POST)
+
+		if form.is_valid():
+			form.save(commit = True)
+			return add_landlord_rating(request)
+		else:
+			print (form.errors)
+	else:
+		form = LandlordForm()
+
+	return render(request,'add_apartment.html', {'form':form})
+
+def add_apartment_rating(request):
+	context = RequestContext(request)
+
+	if request.method == 'POST':
+		form = ApartmentRatingForm(request.POST)
+
+		if form.is_valid():
+			form.save(commit = True)
+			return add_landlord(request)
+		else:
+			print (form.errors)
+	else:
+		form = ApartmentRatingForm()
+
+	return render(request,'add_apartment.html', {'form':form}) #change name of html after merging maybe
+
+def add_landlord_rating(request):
+	context = RequestContext(request)
+
+	if request.method == 'POST':
+		form = LandlordRatingForm(request.POST)
+
+		if form.is_valid():
+			form.save(commit = True)
+			return index(request)
+		else:
+			print (form.errors)
+	else:
+		form = LandlordRatingForm()
+
+	return render(request,'add_apartment.html', {'form':form}) #change name of html after merging maybe

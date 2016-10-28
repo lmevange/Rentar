@@ -1,0 +1,17 @@
+date: October 26, 2016
+meeting_type: group
+attendance: [<grlandon>, <lmevange>, <jacascio>, <mmfraser>]
+absent: []
+excused_absences: [
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: Began creation of the header for the django pages },
+  {ubit: <jacascio>, progress: collaborated with Leo to connect html forms to the database forms and models and created website flow layout},
+  {ubit: <lmevange>, progress: collaborated with Joe to connect database to our html forms and helped create flow sheet },
+  {ubit: <grlandon>, progress: helped create flow sheet and helped malcom start the django headers},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <lmevange>, issue: CASHONLY}
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  Connecting forms to database gave us some trouble in terms of syntax and connections. we started with a seperate forms and models but we eventually decided to use model forms

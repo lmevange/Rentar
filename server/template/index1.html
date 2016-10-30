@@ -1,0 +1,157 @@
+<!--
+Authors: Gregory Landon-Langlois Leonardo Evangelista Malcolm Fraser Joseph Cacsioli
+Project: CSE442 Apartment rating website
+Version: 0.01
+Date: 09-18-2016
+Notes:
+-->
+<!DOCTYPE html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<html>
+<head>
+	<meta charset="utf=8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<meta name="robots" content="index,follow"/> 
+	<link rel="stylesheet" href="assets/css/styles.css"/>
+	<title>Rentar - Review Apartments and Landlords</title>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="page-header">
+		<center><img src="assets/images/fakelogo.png" width="500" height="200" alt="logo"/></center>
+	</div>
+</div>
+<div class="container">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/login/"">Login</a></li>
+                <li><a href="/rating/">Ratings</a></li>
+				<li><a href="/addressview/">Address</a></li>
+				<li><a href="/contact/">Contact Us</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+	<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+	<div id="map"></div>
+	<script>
+		// This example adds a search box to a map, using the Google Place Autocomplete
+		// feature. People can enter geographical searches. The search box will return a
+		// pick list containing a mix of places and predicted search terms.
+
+		// This example requires the Places library. Include the libraries=places
+		// parameter when you first load the API. For example:
+		// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+		function initAutocomplete() {
+			var map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: -33.8688, lng: 151.2195},
+				zoom: 13,
+				mapTypeId: 'roadmap'
+			});
+
+			// Create the search box and link it to the UI element.
+			var input = document.getElementById('pac-input');
+			var searchBox = new google.maps.places.SearchBox(input);
+			map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+			// Bias the SearchBox results towards current map's viewport.
+			map.addListener('bounds_changed', function() {
+				searchBox.setBounds(map.getBounds());
+			});
+
+			var markers = [];
+			// Listen for the event fired when the user selects a prediction and retrieve
+			// more details for that place.
+			searchBox.addListener('places_changed', function() {
+				var places = searchBox.getPlaces();
+
+				if (places.length == 0) {
+					return;
+				}
+
+				// Clear out the old markers.
+				markers.forEach(function(marker) {
+					marker.setMap(null);
+				});
+				markers = [];
+
+				// For each place, get the icon, name and location.
+				var bounds = new google.maps.LatLngBounds();
+				places.forEach(function(place) {
+					if (!place.geometry) {
+						console.log("Returned place contains no geometry");
+						return;
+					}
+					var icon = {
+						url: place.icon,
+						size: new google.maps.Size(71, 71),
+						origin: new google.maps.Point(0, 0),
+						anchor: new google.maps.Point(17, 34),
+						scaledSize: new google.maps.Size(25, 25)
+					};
+
+					// Create a marker for each place.
+					markers.push(new google.maps.Marker({
+						map: map,
+						icon: icon,
+						title: place.name,
+						position: place.geometry.location
+					}));
+
+					if (place.geometry.viewport) {
+						// Only geocodes have viewport.
+						bounds.union(place.geometry.viewport);
+					} else {
+						bounds.extend(place.geometry.location);
+					}
+				});
+				map.fitBounds(bounds);
+			});
+		}
+
+	</script>
+	<div class="container">
+		<div class="mission-statement">
+			<center>
+			<h1>
+				Rentar is for apartment renters
+			</h1>
+			<p>
+				this site is used to find out information about an apartment that you are considering to rent.
+			</p>
+			</center>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMOmPLGoFdmb2OrswKsqz-cehbMG3jJdA&libraries=places&&callback=initAutocomplete"
+			async defer></script>
+</body>
+
+<!-- <footer>
+	<center>
+		<form action="~/pages/login.html">
+			<button type="submit">Login</button>
+		</form>		
+	</center>
+</footer>
+ -->
+
+<!-- Login page to our login.html in pages
+
+<center>
+	<form action="pages/login.html" method="get">
+    	<input type="submit" value="Login" 
+         	name="Submit" id="frm1_submit" />
+	</form>
+</center> -->
+</html>

@@ -1,0 +1,17 @@
+date: October 23, 2016
+meeting_type: group
+attendance: [<grlandon>, <lmevange>, <jacascio>, <mmfraser>]
+absent: []
+excused_absences: [
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: Reaserched Django templates and solved file structure },
+  {ubit: <jacascio>, progress: Created and started hierarchy branch. fixed existing html and started making bootstrap changes},
+  {ubit: <lmevange>, progress: Looked over existing django setup and solved file structure conflits},
+  {ubit: <grlandon>, progress: Fixed URLs and veiws for django use, set up file structure hierarchy},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <lmevange>, issue: CASHONLY}
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  must add django tags including bootstrap and procces data intake into forms

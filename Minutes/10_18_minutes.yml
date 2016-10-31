@@ -1,0 +1,17 @@
+date: October 11, 2016
+meeting_type: ta
+attendance: [<grlandon>, <lmevange>, <jacascio>]
+absent: []
+excused_absences: [<mmfraser>, Stuck with children at work
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: },
+  {ubit: <jacascio>, progress: Set up my server issues},
+  {ubit: <lmevange>, progress: Set up my DB issues},
+  {ubit: <grlandon>, progress: Set up my client issues},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <lmevange>, issue: mah boy joe cashonly dont like good tacos}
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  Start on sprint 3 asap

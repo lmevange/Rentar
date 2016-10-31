@@ -1,0 +1,20 @@
+date: October 27, 2016
+meeting_type: group
+attendance: [<lmevange>, <jacascio>]
+absent: []
+excused_absences: [
+{ubit: <grlandon>, reason: was just a backend meeting so they were not invited},
+{ubit: <mmfraser>, reason: was just a backend meeting so they were not invited},
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, },
+  {ubit: <jacascio>, progress: collaborated with Leo to create new forms and models for our apartment and landlord objects as well as there ratings and solved some merge conflicts},
+  {ubit: <lmevange>, progress: collaborated with Joe  create and update forms and models for all of our objects and encoundered but solved a lot of bugs along the way including a merge conflict},
+  {ubit: <grlandon>, },
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <lmevange>, issue: unable to cycle through pages correctly after making inputs}
+  {ubit: <jacascio>, possibly inproper relationships inbetween tables in database}
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  Should work on dealing with duplicates for landlords, jumping through correct order of pages for ratings, merge tool is useful for future problems, hopefully front end can make our input pages look better than just being ran trough a for loop

@@ -1,0 +1,21 @@
+date: October 25, 2016
+meeting_type: TA meeting
+attendance: [<mmfraser>,<grlandon>]
+absent: [
+{ubit: <jacascio>, reason: forgot},
+{ubit: <lmevange>, reason: forgot},
+]
+excused_absences: []
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, },
+  {ubit: <jacascio>, },
+  {ubit: <lmevange>, },
+  {ubit: <grlandon>, },
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  spoke about we need to improve on
+  the group needs to work on making sure that all the members are showing up to meetings or at least 
+  communicating that they are not going to show up

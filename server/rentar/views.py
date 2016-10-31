@@ -21,7 +21,11 @@ def rating(request):
 	return render(request,'rating.html')
 
 def add_apartment(request):
-	context = RequestContext(request)
+	return render(request,'add_apartment.html')
+	#context = RequestContext(request)
+
+def opinion_form(request):
+	return render(request, 'opinion_form.html')
 
 	if request.method == 'POST':
 		form = ApartmentForm(request.POST)

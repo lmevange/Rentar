@@ -5,106 +5,13 @@ Version: 0.01
 Date: 09-18-2016
 Notes:
 -->
-<!DOCTYPE html>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% extends 'header.html' %}
+{% block body %}
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<html>
-<head>
-	<meta charset="utf=8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width = device-width, initial-scale = 1">
-	<meta name="robots" content="index,follow"/> 
-	<!--<link rel="stylesheet" href="assets/css/styles.css"/>
-	-->
-	<style>
-		#page-header{
-	display: block;	
-	margin-left: auto;
-	margin-right: auto;
-}
-html, body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-#map {
-	display: block;
-	margin: 0 auto;
-	height: 50%;
-	width: 50%;
-}
-.controls {
-	margin-top: 10px;
-	border: 1px solid transparent;
-	border-radius: 2px 0 0 2px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	height: 32px;
-	outline: none;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-#pac-input {
-	background-color: #fff;
-	font-family: Roboto;
-	font-size: 15px;
-	font-weight: 300;
-	margin-left: 12px;
-	padding: 0 11px 0 13px;
-	text-overflow: ellipsis;
-	width: 300px;
-}
-
-#pac-input:focus {
-	border-color: #4d90fe;
-}
-
-.pac-container {
-	font-family: Roboto;
-}
-
-#type-selector {
-	color: #fff;
-	background-color: #4d90fe;
-	padding: 5px 11px 0px 11px;
-}
-
-#type-selector label {
-	font-family: Roboto;
-	font-size: 13px;
-	font-weight: 300;
-}
-#target {
-	width: 345px;
-}
-	</style>
-	<title>Rentar - Review Apartments and Landlords</title>
-</head>
-<body>
-<div class="container-fluid">
-	<div class="page-header">
-		<center><img src="fakelogo.png" width="500" height="200" alt="logo"/></center>
-	</div>
-</div>
-<div class="container">
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="/">Home</a></li>
-				<li><a href="/login/">Login</a></li>
-                <li><a href="/rating/">Ratings</a></li>
-				<li><a href="/addressview/">Address</a></li>
-				<li><a href="/contact/">Contact Us</a></li>
-			</ul>
-		</div>
-	</nav>
-</div>
-
+{% load static %}
+	<center>
+		<img src='{% static "img/homepagepic.jpg" %}' class='img-responsive' alt="My image"/>
+	</center>
 	<input id="pac-input" class="controls" type="text" placeholder="Search Box">
 	<div id="map"></div>
 	<script>
@@ -118,7 +25,7 @@ html, body {
 
 		function initAutocomplete() {
 			var map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: 43.0008, lng: -78.7890},
+				center: {lat: -33.8688, lng: 151.2195},
 				zoom: 13,
 				mapTypeId: 'roadmap'
 			});
@@ -198,13 +105,13 @@ html, body {
 	</div>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMOmPLGoFdmb2OrswKsqz-cehbMG3jJdA&libraries=places&&callback=initAutocomplete"
 			async defer></script>
-</body>
+{% endblock %}
 
 <!-- <footer>
 	<center>
 		<form action="~/pages/login.html">
 			<button type="submit">Login</button>
-		</form>		
+		</form>
 	</center>
 </footer>
  -->
@@ -213,8 +120,8 @@ html, body {
 
 <center>
 	<form action="pages/login.html" method="get">
-    	<input type="submit" value="Login" 
+    	<input type="submit" value="Login"
          	name="Submit" id="frm1_submit" />
 	</form>
 </center> -->
-</html>
+

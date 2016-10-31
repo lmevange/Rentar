@@ -1,0 +1,18 @@
+date: October 29, 2016
+meeting_type: group
+attendance: [<mmfraser>, <grlandon>]
+absent: []
+excused_absences: [
+{ubit: <jacascio>, reason: was just a frontend meeting so they were not invited},
+{ubit: <lmevange>, reason: was just a frontend meeting so they were not invited},
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: worked on getting the navbar header into a django template},
+  {ubit: <jacascio>, },
+  {ubit: <lmevange>, },
+  {ubit: <grlandon>, progress: fixed the issues with google maps and the autocorrect},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+need to get everyone together so we can start to agree on color scheme for site  

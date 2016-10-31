@@ -5,9 +5,9 @@
     </head>
 
     <body>
-        <h1>Add a Apartment</h1>
+        <h1>Rate an Apartment</h1>
 
-        <form id="apartment_form" method="POST"/><!-- for some reason this action is needed. makes url weird, but it posts to database-->
+        <form id="apartment_rating_form" method="POST"/><!-- for some reason this action is needed. makes url weird, but it posts to database-->
 
             {% csrf_token %}
             <!-- {% for hidden in form.hidden_fields %}
@@ -20,7 +20,7 @@
                 {{ field.help_text }}
                 {{ field }}
             {% endfor %}
-	    <input type="submit" name="submit" value="Add Apartment"/>
+	    <input type="submit" name="submit" value="Add Apartment Rating"/>
 	</form>
     </body>
 

@@ -7,6 +7,11 @@ Notes:
 -->
 {% extends 'header.html' %}
 {% block body %}
+
+{% load static %}
+	<center>
+		<img src='{% static "img/homepagepic.jpg" %}' class='img-responsive' alt="My image"/>
+	</center>
 	<input id="pac-input" class="controls" type="text" placeholder="Search Box">
 	<div id="map"></div>
 	<script>
@@ -106,7 +111,7 @@ Notes:
 	<center>
 		<form action="~/pages/login.html">
 			<button type="submit">Login</button>
-		</form>		
+		</form>
 	</center>
 </footer>
  -->
@@ -115,7 +120,7 @@ Notes:
 
 <center>
 	<form action="pages/login.html" method="get">
-    	<input type="submit" value="Login" 
+    	<input type="submit" value="Login"
          	name="Submit" id="frm1_submit" />
 	</form>
 </center> -->

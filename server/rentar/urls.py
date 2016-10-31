@@ -12,5 +12,4 @@ urlpatterns = [
 	url(r'^login/$', views.login, name='login'),
 	url(r'^rating/$',views.rating, name='rating'),
 	url(r'^$', views.index, name='index'),
-	url(r'^opinion_form/$', views.opinion_form, name = 'opinion_form'),
 ]

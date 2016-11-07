@@ -38,7 +38,7 @@ class Apartment(models.Model):
 	#pets later add average fees
 	pets = models.BooleanField(default=False)
 	#landlord info
-	landlord = models.ForeignKey(Landlord) #should only have one
+	landlord = models.ForeignKey(Landlord, default="") #should only have one
 	#rating info
 
 	avg_security_deposit = models.DecimalField(default=0,max_digits=5, decimal_places=2)
@@ -63,7 +63,7 @@ class Apartment_Rating(models.Model):
 	security_deposit = models.DecimalField(default=0,max_digits=5, decimal_places=2)
 	pet_fee = models.DecimalField(default=0, max_digits=5, decimal_places=2)
 	#ratings
-	#utilities:default=0, 
+	#utilities:default=0,
 	water = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	heat = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	electric = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)

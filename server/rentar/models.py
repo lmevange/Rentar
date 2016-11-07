@@ -76,7 +76,7 @@ class Apartment_Rating(models.Model):
 	landlord = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	comment = models.TextField(max_length = 400)
 	def __str__(self):
-	   return "Rating: " +str(id) +" for " + str(apartment)
+	   return id
 
 class Landlord_Rating(models.Model):
 	landlord = models.ForeignKey(Landlord, on_delete=models.CASCADE)
@@ -89,4 +89,4 @@ class Landlord_Rating(models.Model):
 	likeability = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	comment = models.TextField(max_length = 400)
 	def __str__(self):
-	   return "Rating: " +str(id) +" for " + str(landlord)
+	   return id

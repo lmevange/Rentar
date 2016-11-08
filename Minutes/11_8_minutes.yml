@@ -1,0 +1,16 @@
+date: November 8, 2016
+meeting_type: ta
+attendance: [<mmfraser>, <grlandon>, <jacascio>,<lmevange>]
+absent: []
+excused_absences: []
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: made sure issues are fine},
+  {ubit: <jacascio>, progress: Talked about merge we made on the 7th to fix ratings},
+  {ubit: <lmevange>, progress: Talked about merge we made on the 7th to fix landlord rating},
+  {ubit: <grlandon>, progress: talked about issues for sprint, added website stylization issue},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <lmevange>, needed to wait to merge relations to get th ball rolling}
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+Issues all created now we just have to meet and work, JOe has been having some new home troubles but well pick a time for this week or a few times

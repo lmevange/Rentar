@@ -1,0 +1,321 @@
+<!--
+this is a html document i will use to take notes with
+on how to make a bootstrap website for cse442
+10/22/2016
+-->
+
+<!-- always incluse these in you pages
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!--
+			to ensure proper rendering and touch zooming, add the 
+			following <meta> tag inside the <head> element:
+			here insie this area where this note is
+
+		-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--
+			the width=deviceo-width part sets the width of the page to follow the screen-width of the device
+			which will vary depending on the device
+			the initial-scale=1 part sets the intial zoom level when the page is first laoded by the browser
+		-->
+
+		<!--
+			these are the CDN used for rendering bootstrap features they are usaully found here in the 
+			head tags
+		-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="page-header">
+				<center><img src="assets/images/fakelogo.png" width="500" height="200" alt="logo"/></center>
+			</div>
+		</div>
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="assets/pages/login.html">Login</a></li>
+						<li><a href="#">Ratings</a></li>
+						<li><a href="assets/pages/addressview.html">Address</a></li>
+						<li><a href="assets/pages/contact.html">Contact Us</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<!-- trigger the modal with a button -->
+		<div class="container-fluid">
+		<center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Address_info</button></center>
+		<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+		    <!-- Modal content-->
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		<h4 class="modal-title">Address Info</h4>
+      		</div>
+      	<div class="modal-body">
+      	<form>
+  			<div class="form-group">
+    			<label for="address">Enter Address</label>
+    				<input type="text" class="form-control" id="address">
+  			</div>
+  			<div class="form-group">
+    			<label for="city">Enter City</label>
+    			<input type="text" class="form-control" id="city">
+  			</div>
+  			<div class="form-group">
+  				<label for="state">Enter State</label>
+  				<input type="text" class="form-control" id="state">
+  			</div>
+  			<div class="form-group">
+  				<label for="zipcode">Enter Zipcode</label>
+  				<input type="number" class="form-control" id="zipcode">
+  			</div>
+  			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+     		 </div>
+     			 <div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+
+ 		 </div>
+		</div>
+		</div>
+
+		<div class="container-fluid">
+				<!-- trigger the modal with a button -->
+		<center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#gen">Generic info</button></center>
+		<div id="gen" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+		    <!-- Modal content-->
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		<h4 class="modal-title">Generic Info</h4>
+      		</div>
+      	<div class="modal-body">
+      	<form>
+  			<div class="form-group">
+    			<label for="bedroom">Enter number of bedrooms</label>
+    				<input type="number" class="form-control" id="bedroom">
+  			</div>
+  			<div class="form-group">
+    			<label for="bathroom">Enter Bathrooms</label>
+    			<input type="number" class="form-control" id="bathroom">
+  			</div>
+  			<div class="form-group">
+  				<label for="livingroom">Is there a livingroom</label><br>
+  				<!--<input type="text" class="form-control" id="livingroom">-->
+  				<input type="checkbox" name="yes" value="does have livingroom"> Does have a livingroom<br>
+  				<input type="checkbox" name="no" value="doesn't have livingroom"> Doesn't have a livingroom<br>
+  			</div>
+  			<div class="form-group">
+  				<label for="dinningroom">Is there a Diningroom</label><br>
+  				<!--<input type="text" class="form-control" id="livingroom">-->
+  				<input type="checkbox" name="yes" value="does have dinningroom"> Does have a dinningroom<br>
+  				<input type="checkbox" name="no" value="doesn't have dinningroom"> Doesn't have a dinningroom<br>
+  			</div>
+  			<div class="form-group">
+  				<label for="basement">Is there a Basement</label><br>
+  				<!--<input type="text" class="form-control" id="livingroom">-->
+  				<input type="checkbox" name="yes" value="does have Basement"> Does have a Basement<br>
+  				<input type="checkbox" name="no" value="doesn't have Basement"> Doesn't have a Basement<br>
+  			</div>
+  			<div class="form-group">
+  				<label for="attic">Is there a Attic</label><br>
+  				<!--<input type="text" class="form-control" id="livingroom">-->
+  				<input type="checkbox" name="yes" value="does have Attic"> Does have a Attic<br>
+  				<input type="checkbox" name="no" value="doesn't have Attic"> Doesn't have a Attic<br>
+  			</div>
+  			<div class="form-group">
+  				<label for="secondstorage">Is there a Secondary storage</label><br>
+  				<!--<input type="text" class="form-control" id="livingroom">-->
+  				<input type="checkbox" name="yes" value="does have Secondary storage"> Does have a Secondary storage<br>
+  				<input type="checkbox" name="no" value="doesn't have Secondary storage"> Doesn't have a Secondary storage<br>
+  			</div>
+  			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+     		 </div>
+     			 <div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+
+ 		 </div>
+		</div>
+		</div>
+
+		<div class="container-fluid">
+		<!-- trigger the modal with a button -->
+		<center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#util">Utilities</button></center>
+		<div id="util" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+		    <!-- Modal content-->
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		<h4 class="modal-title">Utilities Info</h4>
+      		</div>
+      	<div class="modal-body">
+      	<form>
+
+  			<div class="form-group">
+  				<label for="included">Included Utilities</label><br>
+  				<!--<input type="text" class="form-control" id="livingroom">-->
+  				<input type="checkbox" name="gas" value="includes gas"> Does include gas<br>
+  				<input type="checkbox" name="elec" value="includes elec"> Does include elec<br>
+  				<input type="checkbox" name="water" value="includes water"> Does include water<br>
+  				<input type="checkbox" name="heat" value="includes heat"> Does include heat<br>
+  				<input type="checkbox" name="cable/internet" value="includes cable/internet"> Does include cable/internet<br>
+  				<input type="checkbox" name="washer/dryer" value="includes washer/dryer"> Does include washer/dryer<br>
+  			</div>
+
+  			<div class="form-group">
+  				<label for="notincluded">Not Included Utilities</label><br>
+  				<!--<input type="text" class="form-control" id="livingroom">-->
+  				<input type="checkbox" name="gas" value="not includes gas"> Doesn't include gas<br>
+  				<input type="checkbox" name="elec" value="not includes elec"> Doesn't include elec<br>
+  				<input type="checkbox" name="water" value="not includes water"> Doesn't include water<br>
+  				<input type="checkbox" name="heat" value="not includes heat"> Doesn't include heat<br>
+  				<input type="checkbox" name="cable/internet" value="not includes cable/internet"> Doesn't include cable/internet<br>
+  				<input type="checkbox" name="washer/dryer" value="not includes washer/dryer"> Doesn't include washer/dryer<br>
+  			</div>
+  			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+     		 </div>
+     			 <div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+
+ 		 </div>
+		</div>
+		</div>
+
+		<div class="container-fluid">
+		<!-- trigger the modal with a button -->
+		<center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#park">Parking</button></center>
+		<div id="park" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+		    <!-- Modal content-->
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		<h4 class="modal-title">Parking Info</h4>
+      		</div>
+      	<div class="modal-body">
+      	<form>
+  			<div class="form-group">
+    			<label for="Parking">Is there Parking</label><br>
+    				<input type="checkbox" name="yes" value="does have Parking"> Does have a Parking spot<br>
+
+    				<input type="checkbox" name="no" value="doesn't have Parking"> Doesn't have a Parking<br>
+  			</div>
+  			<div class="form-group">
+  				<label for="numspot">Enter Number of spots</label>
+  				<input type="number" class="form-control" id="numspot">
+  			</div>
+  			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+     		 </div>
+     			 <div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+
+ 		 </div>
+		</div>
+		</div>
+
+		<div class="container-fluid">
+		<!-- trigger the modal with a button -->
+		<center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tran">Public Transit</button></center>
+		<div id="tran" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+		    <!-- Modal content-->
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		<h4 class="modal-title">Public Transit</h4>
+      		</div>
+      	<div class="modal-body">
+      	<form>
+  		
+  			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+     		 </div>
+     			 <div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+
+ 		 </div>
+		</div>
+		</div>
+	<!-- 	    this works for me 
+    Modal -->
+    <div class="modal fade" id="qmyModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Google Maps</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div id="map_canvas" style="width:auto; height: 500px;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#qmyModal">View Map</button>
+
+
+<script type="text/javascript">
+    function initializeMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(51.219987, 4.396237),
+            zoom: 12,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+          mapOptions);
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(51.219987, 4.396237)
+        });
+        marker.setMap(map);
+    }
+
+    //show map on modal
+    $('#qmyModal').on('shown.bs.modal', function () {
+        initializeMap();
+    });
+
+</script>
+
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMOmPLGoFdmb2OrswKsqz-cehbMG3jJdA&libraries=places&&callback=initAutocomplete"
+			async defer></script>
+	</body>
+</html>

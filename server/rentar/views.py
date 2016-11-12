@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from django.forms import ModelForm
 from rentar.forms import ApartmentForm, LandlordForm, LandlordRatingForm, ApartmentRatingForm
+from django.contrib.auth import authenticate, login
+from django.views.generic import View
+from .forms import userForm
 
 # Create your views here.
 def index(request):
@@ -83,3 +86,32 @@ def add_landlord_rating(request):
 		form = LandlordRatingForm()
 
 	return render(request,'add_landlord_rating.html', {'form':form}) #change name of html after merging maybe
+
+class userFormView(View):
+	form_class = userForm
+	#template_name = registration_form.html
+
+	def get(self,request):
+		form = self.form_class(None)
+		return render(request, self.template_name, {'form': form})
+
+	def post(self, request):
+		form = self.form_class(request.POST)
+
+		if form.is_valid():
+
+			user = form.save(commit=False)
+			username = form.cleaned_data['username']
+			password = form.cleaned_data['password']
+
+			user.set_password(password)
+			user.save()
+
+			user = autheticate(username=username, password=password)
+
+			if user is not None:
+
+				if user.is_active:
+
+					login(request, user)
+					return redirect('')

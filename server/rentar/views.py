@@ -5,7 +5,7 @@ from django.forms import ModelForm
 from rentar.forms import ApartmentForm, LandlordForm, LandlordRatingForm, ApartmentRatingForm
 from django.contrib.auth import authenticate, login
 from django.views.generic import View
-from .forms import userForm
+from rentar.forms import UserForm
 
 # Create your views here.
 def index(request):
@@ -22,6 +22,9 @@ def contact(request):
 
 def rating(request):
 	return render(request,'rating.html')
+
+def registration_form(request):
+	return render(request,'registration_form.html')
 
 def add_apartment(request):
 	context = RequestContext(request)
@@ -88,8 +91,8 @@ def add_landlord_rating(request):
 	return render(request,'add_landlord_rating.html', {'form':form}) #change name of html after merging maybe
 
 class userFormView(View):
-	form_class = userForm
-	#template_name = registration_form.html
+	form_class = UserForm
+	template_name = 'template/registration_form.html'
 
 	def get(self,request):
 		form = self.form_class(None)
@@ -114,4 +117,6 @@ class userFormView(View):
 				if user.is_active:
 
 					login(request, user)
-					return redirect('')
+					return redirect('rentar:index')
+
+		return render(request, self.template_name, {'form': form})

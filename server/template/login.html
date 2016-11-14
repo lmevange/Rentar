@@ -16,9 +16,11 @@
     </center>
 
     <center>
-    	    <button type="submit">Login</button>
+        <div class="container-fluid">
+            <a href="{% url 'registration_form' %}" class="btn btn-success">Create Account</a>
+            <a href="{% url 'index' %}" class="btn btn-primary">Login</a>
     	    <input type="checkbox" checked="checked"> Remember me
-
+        </div>
     </center>
 
 {% endblock %}

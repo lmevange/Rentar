@@ -7,8 +7,11 @@
     <hr/>
 
     <form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
-    {{ form|crispy }}    
+    {{ form|crispy }}
     <input type="submit" class="btn btn-success" value="{{ title }}"/>
+    <a href="{% url 'register' %}" class="btn btn-success"> {{ oppTitle }} </a>
+
+
     </form>
     </div>
 {% endblock %}

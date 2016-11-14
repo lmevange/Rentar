@@ -1,11 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import RequestContext
 from django.forms import ModelForm
 from rentar.forms import ApartmentForm, LandlordForm, LandlordRatingForm, ApartmentRatingForm
-from django.contrib.auth import authenticate, login
+# from django.contrib.auth import authenticate, login
+from django.contrib.auth import (
+	authenticate,
+	get_user_model,
+	login as auth_login,
+	logout,
+
+)
 from django.views.generic import View
-from rentar.forms import UserForm
+from rentar.forms import UserLoginForm, UserRegisterForm
 
 # Create your views here.
 def index(request):
@@ -90,33 +97,37 @@ def add_landlord_rating(request):
 
 	return render(request,'add_landlord_rating.html', {'form':form}) #change name of html after merging maybe
 
-class userFormView(View):
-	form_class = UserForm
-	template_name = 'template/registration_form.html'
+def login_view(request):
+	title = "Login"
+	oppTitle = "Create Account"
+	form = UserLoginForm(request.POST or None)
+	if form.is_valid():
+		username = form.cleaned_data.get("username")
+		password = form.cleaned_data.get("password")
+		user = authenticate(username=username, password=password)
+		auth_login(request,user)
 
-	def get(self,request):
-		form = self.form_class(None)
-		return render(request, self.template_name, {'form': form})
+	return render(request, "login_form.html", {"form":form, "title": title, "oppTitle": oppTitle})
 
-	def post(self, request):
-		form = self.form_class(request.POST)
+def register_view(request):
+	title = "Register"
+	form = UserRegisterForm(request.POST or None)
+	if form.is_valid():
+		user = form.save(commit=False)
+		password = form.cleaned_data.get('password')
+		user.set_password(password)
+		user.save()
 
-		if form.is_valid():
+		new_user = authenticate(username=user.username, password=password)		
+		auth_login(request,user)
+		return redirect("/") # redirects to homepage after registration 
 
-			user = form.save(commit=False)
-			username = form.cleaned_data['username']
-			password = form.cleaned_data['password']
+	context = {
+		"form": form,
+		"title": title
+	}
+	return render(request, "registration_form.html", context)
 
-			user.set_password(password)
-			user.save()
-
-			user = autheticate(username=username, password=password)
-
-			if user is not None:
-
-				if user.is_active:
-
-					login(request, user)
-					return redirect('rentar:index')
-
-		return render(request, self.template_name, {'form': form})
+def logout_view(request):
+	logout(request)
+	return render(request, "registration_form.html", {})

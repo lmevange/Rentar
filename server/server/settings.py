@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 SITE_ID=1
 # Application definition
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
 INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.admin',
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rentar.apps.RentarConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

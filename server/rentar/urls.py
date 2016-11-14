@@ -10,7 +10,9 @@ urlpatterns = [
 	url(r'^addressview/$', views.addressview, name='addressview'),
 	url(r'^registration_form/$', views.registration_form, name='registration_form'),
 	url(r'^contact/$', views.contact, name='contact'),
-	url(r'^login/$', views.login, name='login'),
+	url(r'^login/$', views.login_view, name='login'),
+	url(r'^logout/$', views.logout_view, name='logout'),
+	url(r'^register/$', views.register_view, name='register'),
 	url(r'^rating/$',views.rating, name='rating'),
 	url(r'^$', views.index, name='index'),
 ]

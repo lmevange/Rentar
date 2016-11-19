@@ -1,5 +1,5 @@
 from django import forms
-from rentar.models import Apartment, Landlord, Apartment_Rating, Landlord_Rating
+from rentar.models import Apartment, Apartment_Rating
 class ApartmentForm(forms.ModelForm):
 	class Meta:
 		model = Apartment

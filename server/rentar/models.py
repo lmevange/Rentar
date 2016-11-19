@@ -73,7 +73,6 @@ class Apartment_Rating(models.Model):
 	landlord_privacy = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	landlord_responsiveness = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	landlord_maintenance= models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	landlord_ = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	comment = models.TextField(max_length = 400)
 	def __str__(self):
 	   return str(id)

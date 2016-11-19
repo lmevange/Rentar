@@ -27,8 +27,8 @@ def add_apartment(request):
 		form = ApartmentForm(request.POST)
 
 		if form.is_valid():
-			form.save(commit = True)
-			return add_apartment_rating(request)
+			apartment = form.save(commit = True)
+			return redirect ('add_apartment_rating', pk = apartment.pk)
 		else:
 			print (form.errors)
 	else:
@@ -36,7 +36,7 @@ def add_apartment(request):
 
 	return render(request,'add_apartment.html', {'form':form})
 
-def add_apartment_rating(request):
+def add_apartment_rating(request, pk):
 	context = RequestContext(request)
 
 	if request.method == 'POST':

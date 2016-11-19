@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext
 from django.forms import ModelForm
-from rentar.forms import ApartmentForm, LandlordForm, LandlordRatingForm, ApartmentRatingForm
+from rentar.forms import ApartmentForm, ApartmentRatingForm
 
 # Create your views here.
 def index(request):

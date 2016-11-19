@@ -36,7 +36,6 @@ class Apartment(models.Model):
 	landlord_company = models.CharField(default = "", max_length=200)
 
 	#rating info
-	rating = models.ForeignKey(Apartment_Rating, default="")
 	security_deposit = models.DecimalField(default=0,max_digits=5, decimal_places=2)
 	rent = models.DecimalField(default=0,max_digits=6, decimal_places=2)
 
@@ -69,7 +68,7 @@ class Apartment_Rating(models.Model):
 	#changed from privacy
 	neighborhood = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	location = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	
+
 	landlord_hot = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	landlord_privacy = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	landlord_responsiveness = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)

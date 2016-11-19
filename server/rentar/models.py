@@ -1,12 +1,5 @@
 from django.db import models
 
-class Landlord(models.Model):
-	first_name = models.CharField(default="", max_length=200)
-	last_name = models.CharField(default="", max_length=200)
-	company = models.CharField(default = "", max_length=200)
-	def __str__(self):
-	   return self.last_name
-
 class Apartment(models.Model):
 	#location info
 	#address_full = models.CharField(default="",max_length=250,primary_key=True)
@@ -38,11 +31,14 @@ class Apartment(models.Model):
 	#pets later add average fees
 	pets = models.BooleanField(default=False)
 	#landlord info
-	landlord = models.ForeignKey(Landlord, default="") #should only have one
-	#rating info
+	landlord_first_name = models.CharField(default="", max_length=200)
+	landlord_last_name = models.CharField(default="", max_length=200)
+	landlord_company = models.CharField(default = "", max_length=200)
 
-	avg_security_deposit = models.DecimalField(default=0,max_digits=5, decimal_places=2)
-	avg_rent = models.DecimalField(default=0,max_digits=6, decimal_places=2)
+	#rating info
+	rating = models.ForeignKey(Apartment_Rating, default="")
+	security_deposit = models.DecimalField(default=0,max_digits=5, decimal_places=2)
+	rent = models.DecimalField(default=0,max_digits=6, decimal_places=2)
 
 	def __str__(self):
 	   return self.address_line
@@ -73,20 +69,12 @@ class Apartment_Rating(models.Model):
 	#changed from privacy
 	neighborhood = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	location = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	landlord = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	comment = models.TextField(max_length = 400)
-	def __str__(self):
-	   return str(id)
-
-class Landlord_Rating(models.Model):
-	landlord = models.ForeignKey(Landlord, on_delete=models.CASCADE)
-	#apartment = models.ForeignKey(Apartment)
-	#ratings
-	hot = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	privacy = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	responsiveness = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	maintenance= models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	likeability = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	
+	landlord_hot = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	landlord_privacy = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	landlord_responsiveness = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	landlord_maintenance= models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	landlord_ = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
 	comment = models.TextField(max_length = 400)
 	def __str__(self):
 	   return str(id)

@@ -12,7 +12,7 @@ from django.contrib.auth import (
 
 )
 from django.views.generic import View
-from rentar.forms import UserLoginForm, UserRegisterForm
+from rentar.forms import UserLoginForm, UserRegisterForm, UserProfileForm
 
 # Create your views here.
 def index(request):
@@ -106,6 +106,7 @@ def login_view(request):
 		password = form.cleaned_data.get("password")
 		user = authenticate(username=username, password=password)
 		auth_login(request,user)
+		return redirect("/")
 
 	return render(request, "login_form.html", {"form":form, "title": title, "oppTitle": oppTitle})
 
@@ -130,4 +131,30 @@ def register_view(request):
 
 def logout_view(request):
 	logout(request)
-	return render(request, "registration_form.html", {})
+	return render(request, "index.html", {})
+
+#will be used in the future
+def profile_view(request):
+	user = request.user
+	form = UserProfileForm(initial={'first_name':user.first_name, 'last_name':user.last_name})
+	context = {
+		"form": form
+	}
+	return render(request, 'profile.html', context)
+
+def edit_profile(request):
+	user = request.user
+	form = UserProfileForm(request.POST or None, initial={'first_name':user.first_name, 'last_name':user.last_name})
+	if request.method == 'POST':
+		if form.is_valid():
+			user.username = request.POST['username']
+			user.first_name = request.POST['first_name']
+			user.last_name = request.POST['last_name']
+			user.save()
+
+	context = {
+		"form": form,
+		"username": user
+	}
+
+	return render(request, "edit_profile.html", context)

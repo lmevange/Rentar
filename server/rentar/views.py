@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.template import RequestContext
-from django.forms import ModelForm
+from django.forms import ModelForm, HiddenInput
 from rentar.forms import ApartmentForm, ApartmentRatingForm
 from rentar.models import Apartment
 from django.contrib.auth import (
@@ -51,14 +51,15 @@ def add_apartment(request):
 	return render(request,'add_apartment.html', {'form':form})
 
 def add_apartment_rating(request, pk):
-	context = RequestContext(request)
+#	context = RequestContext(request)
 
 	if request.method == 'POST':
 		form = ApartmentRatingForm(request.POST)
 
 		if form.is_valid():
 			rating = form.save(commit = False)
-			rating.id=pk
+			rating.apartment=Apartment.objects.get(id=pk) 
+			rating.save()
 			return index(request)
 		else:
 			print (form.errors)

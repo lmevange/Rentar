@@ -125,19 +125,38 @@
                   {{ field.errors }}
              </div>
              <div class="form-group">
-                 <label for="{{form.landlord.id_landlord}}">Landlord :</label>
-                          {{form.landlord}}
-                          {{ field.errors }}
-                 <label for="{{form.comment.id_comment}}">Landlord Last name:</label>
+                 <label for="{{form.landlord_maintenance.id_landlord_maintenance}}">Landlord maintenance:</label>
+                    {{form.landlord_maintenance}}
+                    {{ field.errors }}
+             </div>
+
+      <div class="form-group">
+                 <label for="{{form.landlord_hot.id_landlord_hot}}">Landlord HOT!!!:</label>
+                    {{form.landlord_hot}}
+                    {{ field.errors }}
+             </div>
+
+      <div class="form-group">
+                 <label for="{{form.landlord_privacy.id_landlord_privacy}}">Landlord privacy:</label>
+                    {{form.landlord_privacy}}
+                    {{ field.errors }}
+             </div>
+
+      <div class="form-group">
+                 <label for="{{form.landlord_responsiveness.id_landlord_responsiveness}}">Landlord responsiveness:</label>
+                    {{form.landlord_responsiveness}}
+                    {{ field.errors }}
+        </div>
+
+      <div class="form-group">
+                 <label for="{{form.comment.id_comment}}">Comment:</label>
                     {{form.comment}}
                     {{ field.errors }}
              </div>
-        </div>
-
-
               
             <button type="submit" class="btn btn-default">Submit</button>
-             </div>
+            </form>
+		 </div>
                  <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     

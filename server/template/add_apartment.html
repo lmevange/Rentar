@@ -145,13 +145,15 @@
                  <label for="{{form.landlord_first_name.id_landlord_first_name}}">Landlord First name:</label>
                           {{form.landlord_first_name}}
                           {{ field.errors }}
+		</div>
+		<div class="form-group">
                  <label for="{{form.landlord_last_name.id_landlord_last_name}}">Landlord Last name:</label>
-                    {{form.landlord_flast_name}}
+                    {{form.landlord_last_name}}
                     {{ field.errors }}
              </div>
              <div class="form-group">
                  <label for="{{form.landlord_company.id_landlord_company}}">LandLord Company:</label>
-                  {{form.landlord}}
+                  {{form.landlord_company}}
                   {{ field.errors }}
               </div>
         </div>
@@ -159,7 +161,8 @@
 
               
             <button type="submit" class="btn btn-default">Submit</button>
-             </div>
+             </form>
+		</div>
                  <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     

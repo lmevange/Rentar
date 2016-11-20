@@ -3,8 +3,8 @@ from . import views
 
 urlpatterns = [
 	url(r'^registration_form/$', views.registration_form, name='registration_form'),
-	url(r'^edit_apartment/(?P<pk>\d+)/$', views.edit_apartment, name='edit_apartment'),
-	url(r'^add_apartment_rating/(?P<pk>\d+)/$', views.add_apartment_rating, name='add_apartment_rating'), 
+	url(r'^edit_apartment/(?P<pk>\d+)$', views.edit_apartment, name='edit_apartment'),
+	url(r'^add_apartment_rating/(?P<pk>\d+)$', views.add_apartment_rating, name='add_apartment_rating'), 
 	url(r'^add_apartment/$', views.add_apartment, name='add_apartment'),	
 	url(r'^apartment_view/$', views.addressview, name='apartent_view'),
 	url(r'^contact/$', views.contact, name='contact'),

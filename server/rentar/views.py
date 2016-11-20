@@ -4,6 +4,16 @@ from django.template import RequestContext
 from django.forms import ModelForm
 from rentar.forms import ApartmentForm, ApartmentRatingForm
 from rentar.models import Apartment
+from django.contrib.auth import (
+	authenticate,
+	get_user_model,
+	login as auth_login,
+	logout,
+# from django.contrib.auth import authenticate, login
+
+)
+from django.views.generic import View
+from rentar.forms import UserLoginForm, UserRegisterForm, UserProfileForm
 
 # Create your views here.
 def index(request):
@@ -20,6 +30,9 @@ def contact(request):
 
 def rating(request):
 	return render(request,'rating.html')
+
+def registration_form(request):
+	return render(request,'registration_form.html')
 
 def add_apartment(request):
 	context = RequestContext(request)
@@ -64,3 +77,65 @@ def edit_apartment(request, pk):
 	else:
 		form = ApartmentForm(instance=apartment)
 	return render(request, 'add_apartment.html', {'form':form})#possibly make different html for edit
+
+def login_view(request):
+	title = "Login"
+	oppTitle = "Create Account"
+	form = UserLoginForm(request.POST or None)
+	if form.is_valid():
+		username = form.cleaned_data.get("username")
+		password = form.cleaned_data.get("password")
+		user = authenticate(username=username, password=password)
+		auth_login(request,user)
+		return redirect("/")
+
+	return render(request, "login_form.html", {"form":form, "title": title, "oppTitle": oppTitle})
+
+def register_view(request):
+	title = "Register"
+	form = UserRegisterForm(request.POST or None)
+	if form.is_valid():
+		user = form.save(commit=False)
+		password = form.cleaned_data.get('password')
+		user.set_password(password)
+		user.save()
+
+		new_user = authenticate(username=user.username, password=password)		
+		auth_login(request,user)
+		return redirect("/") # redirects to homepage after registration 
+
+	context = {
+		"form": form,
+		"title": title
+	}
+	return render(request, "registration_form.html", context)
+
+def logout_view(request):
+	logout(request)
+	return render(request, "index.html", {})
+
+#will be used in the future
+def profile_view(request):
+	user = request.user
+	form = UserProfileForm(initial={'first_name':user.first_name, 'last_name':user.last_name})
+	context = {
+		"form": form
+	}
+	return render(request, 'profile.html', context)
+
+def edit_profile(request):
+	user = request.user
+	form = UserProfileForm(request.POST or None, initial={'first_name':user.first_name, 'last_name':user.last_name})
+	if request.method == 'POST':
+		if form.is_valid():
+			user.username = request.POST['username']
+			user.first_name = request.POST['first_name']
+			user.last_name = request.POST['last_name']
+			user.save()
+
+	context = {
+		"form": form,
+		"username": user
+	}
+
+	return render(request, "edit_profile.html", context)

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Apartment(models.Model):
 	#location info
@@ -42,8 +43,9 @@ class Apartment(models.Model):
 	def __str__(self):
 	   return self.address_line
 
+
 ##################
-#id with auto inc is set as primary key automatically for all tables
+# id with auto inc is set as primary key automatically for all tables
 ##################
 class Apartment_Rating(models.Model):
 	#info on rent
@@ -76,3 +78,6 @@ class Apartment_Rating(models.Model):
 	comment = models.TextField(max_length = 400)
 	def __str__(self):
 	   return str(id)
+
+    def __str__(self):
+        return "Rating: " + str(id) + " for " + str(landlord)

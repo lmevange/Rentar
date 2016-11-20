@@ -1,0 +1,14 @@
+{% extends 'header.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+    <div class="col-sm-6 col-sm-offset-2">
+    <h1>Edit Profile for {{ username }}</h1>
+    <hr/>
+
+    <form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
+    {{ form|crispy }}    
+    <input type="submit" class="btn btn-success" value="Save"/>
+    </form>
+    </div>
+{% endblock %}

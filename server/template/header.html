@@ -4,6 +4,25 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+
+<script type="text/javascript">
+$(function(){
+  var current_page_URL = location.href;
+  $( "a" ).each(function() {
+     if ($(this).attr("href") !== "#") {
+       var target_URL = $(this).prop("href");
+       if (target_URL == current_page_URL) {
+          $('nav a').parents('li, ul').removeClass('active');
+          $(this).parent('li').addClass('active');
+          return false;
+       }
+     }
+  });
+});</script>
+
+
 {% load static %}
     <head>
         <meta charset="utf=8">
@@ -35,11 +54,25 @@
                 <ul class="nav navbar-nav">
                     <h3 class="navbar-text"> Rentar Raters</h3>
                     <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/login/">Login</a></li>
                     <li><a href="/rating/">Ratings</a></li>
                     <li><a href="/addressview/">Address</a></li>
                     <li><a href="/contact/">Contact Us</a></li>
                 </ul>
+                    {% if not request.user.is_authenticated %}
+                        <ul class="nav navbar-nav navbar-right" style="float:right">
+                            <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    {% else %}
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user">{{user.username}}</span><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'edit_profile' %}">Edit Profile</a></li>                        
+                                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                                </ul> 
+                            </li>
+                        </ul>                                 
+                    {% endif %}
             </div>
         </nav>
         {% block body %}

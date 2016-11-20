@@ -1,27 +1,177 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Rentar</title>
-    </head>
+{% extends 'header.html' %}
+{% block body %}
+
+{% load static %}
+
+        <!--
+            the width=deviceo-width part sets the width of the page to follow the screen-width of the device
+            which will vary depending on the device
+            the initial-scale=1 part sets the intial zoom level when the page is first laoded by the browser
+        -->
+
+        <!--
+            these are the CDN used for rendering bootstrap features they are usaully found here in the 
+            head tags
+        -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
 
     <body>
-        <h1>Add a Apartment</h1>
+        <h1>Add Apartment</h1>
+        <div class="container-fluid">
+        <center><button type="button" class="btn btn-info btn-lg" id="addressbtn" data-toggle="modal" data-target="#myModal">Address_info</button></center>
+        <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Address Info</h4>
+            </div>
+        <div class="modal-body">
+        <form id="apartment_form" method="POST"/> 
+        {% csrf_token %}
 
-        <form id="apartment_form" method="POST"/><!-- for some reason this action is needed. makes url weird, but it posts to database-->
-
-            {% csrf_token %}
-            <!-- {% for hidden in form.hidden_fields %}
-                {{ hidden }}
-            {% endfor %} -->
-
-            {% for field in form.visible_fields %}
+            <div class="form-group">
+                <label for="{{form.address_line.id_address_line}}">Address line:</label>
+                    {{form.address_line}}
+                    {{ field.errors }}
+                    
+            </div>
+            <div class="form-group">
+                <label for="{{form.city.id_city}}">City:</label>
+                {{form.city}}
                 {{ field.errors }}
-		{{ field.label_tag }}
-                {{ field.help_text }}
-                {{ field }}
-            {% endfor %}
-	    <input type="submit" name="submit" value="Add Apartment"/>
-	</form>
+            </div>
+            <div class="form-group">
+                <label for="{{form.state.id_state}}">State:</label>
+                {{form.state}}
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.zipcode.id_zipcode}}">Zipcode:</label>
+                {{form.zipcode}}
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.bedrooms.id_bedroom}}">Bedrooms:</label>
+                    {{form.bedrooms}}
+                    {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.bathrooms.id_bathroom}}">Bathrooms:</label>
+                {{form.bathrooms}}
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.living_room.id_living_room}}">Living room:</label>
+                <!--<input type="text" class="form-control" id="livingroom">-->
+                {{form.living_room}}
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.dining_room.id_dining_room}}">Dining room:</label>
+                <!--<input type="text" class="form-control" id="livingroom">-->
+                {{form.dining_room}} 
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.basement.id_basement}}">Basement:</label>
+                <!--<input type="text" class="form-control" id="livingroom">-->
+                {{form.basement}}
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.attic.id_attic}}">Attic:</label>
+                <!--<input type="text" class="form-control" id="livingroom">-->
+                {{form.attic}} 
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.secondary_storage.id_secondary_storage}}">Secondary storage:</label>
+                <!--<input type="text" class="form-control" id="livingroom">-->
+                {{form.secondary_storage}}
+                {{ field.errors }}
+            </div>
+          <div class="form-group">
+                  <label for="{{form.gas.id_gas}}">Included Utilities</label>
+                         {{form.gas}} 
+                         {{ field.errors }}
+                 <label for="{{form.electric.id_electric}}">Electric</label>
+                      {{form.electric}} 
+                      {{ field.errors }}
+                 <label for="{{form.water.id_water}}">Water:</label>
+                     {{form.water}} 
+                     {{ field.errors }}
+                  <label for="{{form.heat.id_heat}}">Heat:</label>
+                      {{form.heat}}
+                      {{ field.errors }}
+                 <label for="{{form.dryer.id_dryer}}">Dryer:</label>
+                      {{form.dryer}} 
+                      {{ field.errors }}
+                  <label for="{{form.washer.id_washer}}">Washer:</label>
+                     {{form.washer}} 
+                     {{ field.errors }}
+                  <label for="{{form.garbage.id_garbage}}">Garbage:</label>
+                     {{form.garbage}} 
+                     {{ field.errors }}
+         </div>
+            <div class="form-group">
+                 <label for="{{form.parking_offstreet.id_parking_offstreet}}">Parking Offstreet:</label>
+                    {{form.parking_offstreet}}
+                    {{ field.errors }}
+                  <label for="{{form.parking_onstreet.id_parking_onstreet}}">Parking Onstreet:</label>
+                    {{form.parking_onstreet}} 
+                    {{ field.errors }}
+            </div>
+            <div class="form-group">
+                  <label for="{{form.public_transportation.id_public_transportation}}">Public transportation:</label>
+                     {{form.public_transportation}}
+                     {{ field.errors }}
+             </div>
+                <div class="form-group">
+                     <label for="{{form.pets.id_pets}}">Pets:</label>
+                  {{form.pets}}
+                  {{ field.errors }}
+             </div>
+             <div class="form-group">
+                 <label for="{{form.landlord_first_name.id_landlord_first_name}}">Landlord First name:</label>
+                          {{form.landlord_first_name}}
+                          {{ field.errors }}
+                 <label for="{{form.landlord_last_name.id_landlord_last_name}}">Landlord Last name:</label>
+                    {{form.landlord_flast_name}}
+                    {{ field.errors }}
+             </div>
+             <div class="form-group">
+                 <label for="{{form.landlord_company.id_landlord_company}}">LandLord Company:</label>
+                  {{form.landlord}}
+                  {{ field.errors }}
+              </div>
+        </div>
+
+
+              
+            <button type="submit" class="btn btn-default">Submit</button>
+             </div>
+                 <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    
+
+                </div>
+            </div>
+
+         </div>
+        </div>
+        </div>
+
+       
     </body>
 
-</html>
+{% endblock %}

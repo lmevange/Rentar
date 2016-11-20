@@ -44,7 +44,8 @@ def add_apartment_rating(request, pk):
 		form = ApartmentRatingForm(request.POST)
 
 		if form.is_valid():
-			rating = form.save(commit = True)
+			rating = form.save(commit = False)
+			rating.id=pk
 			return index(request)
 		else:
 			print (form.errors)

@@ -36,8 +36,8 @@ class Apartment(models.Model):
 	landlord_company = models.CharField(default = "", max_length=200)
 
 	#rating info
-	security_deposit = models.DecimalField(default=0,max_digits=5, decimal_places=2)
-	rent = models.DecimalField(default=0,max_digits=6, decimal_places=2)
+	#security_deposit = models.DecimalField(default=0,max_digits=5, decimal_places=2)
+	#rent = models.DecimalField(default=0,max_digits=6, decimal_places=2)
 
 	def __str__(self):
 	   return self.address_line
@@ -47,15 +47,15 @@ class Apartment(models.Model):
 ##################
 class Apartment_Rating(models.Model):
 	#info on rent
-	apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE) #if apartment is deleted delete this too
+	apartment = models.ForeignKey(Apartment,editable=False, on_delete=models.CASCADE) #if apartment is deleted delete this too
 	#landlord = models.ForeignKey(Landlord)
 
 	move_in_date = models.DateField()
 	years_lived = models.PositiveSmallIntegerField(default=0)
 	#costs
-	starting_rent = models.DecimalField(default=0, max_digits=5, decimal_places=2)
-	ending_rent = models.DecimalField(default=0, max_digits=5, decimal_places=2)
-	security_deposit = models.DecimalField(default=0,max_digits=5, decimal_places=2)
+	starting_rent = models.DecimalField(default=0, max_digits=8, decimal_places=2)
+	ending_rent = models.DecimalField(default=0, max_digits=8, decimal_places=2)
+	security_deposit = models.DecimalField(default=0,max_digits=8, decimal_places=2)
 	pet_fee = models.DecimalField(default=0, max_digits=5, decimal_places=2)
 	#ratings
 	#utilities:default=0,

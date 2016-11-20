@@ -37,6 +37,8 @@ on how to make a bootstrap website for cse442
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
+{% extends 'header.html' %}
+  <!--
 		<div class="container-fluid">
 			<div class="page-header">
 				<center><img src="assets/images/fakelogo.png" width="500" height="200" alt="logo"/></center>
@@ -55,6 +57,8 @@ on how to make a bootstrap website for cse442
 				</div>
 			</nav>
 		</div>
+
+    -->
 		<!-- trigger the modal with a button -->
 		<div class="container-fluid">
 		<center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Address_info</button></center>
@@ -67,25 +71,23 @@ on how to make a bootstrap website for cse442
         		<h4 class="modal-title">Address Info</h4>
       		</div>
       	<div class="modal-body">
-      	<form>  <!--
-              select class  from view.py 
-              <form action="{% url 'something' %}" method = get >
-        -->
+      	<form id="apartment_form" method="POST"/> 
+        {% csrf_token %}
   			<div class="form-group">
-    			<label for="address">Enter Address</label>
-    				<input type="text" class="form-control" id="address" name="address" value="313 baynes">
+    			<label for="id_address_line">Address line:</label>
+    				<input id="id_address_line" maxlength="250" name="address_line" type="text" value="313 baynes" required />
   			</div>
   			<div class="form-group">
-    			<label for="city">Enter City</label>
-    			<input type="text" class="form-control" id="city" name="city" value="buffalo">
+    			<label for="id_city">City:</label>
+    			<input  id="id_city" maxlength="250" name="city" type="text" value="buffalo" required />
   			</div>
   			<div class="form-group">
-  				<label for="state">Enter State</label>
-  				<input type="text" class="form-control" id="state" name="state" value="New York">
+  				<label for="id_state">State:</label>
+  				<input id="id_state" maxlength="250" name="state" type="text" value="New York" required />
   			</div>
   			<div class="form-group">
-  				<label for="zipcode">Enter Zipcode</label>
-  				<input type="number" class="form-control" id="zipcode" name="zipcode" value="14213">
+  				<label for="id_zipcode">Zipcode:</label>
+  				<input id="zipcode" maxlength="250" name="zipcode" type="text" value="14213" required />
   			</div>
   			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
@@ -111,44 +113,41 @@ on how to make a bootstrap website for cse442
         		<h4 class="modal-title">Generic Info</h4>
       		</div>
       	<div class="modal-body">
-      	<form>
+      	<form id="apartment_form" method="POST"/>
+        {% csrf_token %}
   			<div class="form-group">
-    			<label for="bedroom">Enter number of bedrooms</label>
-    				<input type="number" class="form-control" id="bedroom" name="bedroom" value="1">
+    			<label for="id_bedroom">Bedrooms:</label>
+    				<input id="id_bedroom" maxlength="250" name="bedrooms" type="text" value="1" required />
   			</div>
   			<div class="form-group">
-    			<label for="bathroom">Enter Bathrooms</label>
-    			<input type="number" class="form-control" id="bathroom" name="bathroom" value="1">
+    			<label for="id_bathroom">Bathrooms:</label>
+    			<input id="id_bathrooms" maxlength="250" name="bathrooms" type="text" value="1" required />
   			</div>
   			<div class="form-group">
-  				<label for="livingroom">Is there a livingroom</label><br>
+  				<label for="id_living_room">Living room:</label>
   				<!--<input type="text" class="form-control" id="livingroom">-->
-  				<input type="checkbox" name="yes" value="does have livingroom"> Does have a livingroom<br>
-  				<input type="checkbox" name="no" value="doesn't have livingroom"> Doesn't have a livingroom<br>
+  				<input  id="id_living_room" name="living_room" type="checkbox" /> 
+  				
   			</div>
   			<div class="form-group">
-  				<label for="dinningroom">Is there a Diningroom</label><br>
+  				<label for="id_dining_room">Dining room:</label>
   				<!--<input type="text" class="form-control" id="livingroom">-->
-  				<input type="checkbox" name="yes" value="does have dinningroom"> Does have a dinningroom<br>
-  				<input type="checkbox" name="no" value="doesn't have dinningroom"> Doesn't have a dinningroom<br>
+  				<input id="id_dining_room" name="dining_room" type="checkbox" /> 
   			</div>
   			<div class="form-group">
-  				<label for="basement">Is there a Basement</label><br>
+  				<label for="id_basement">Basement:</label>
   				<!--<input type="text" class="form-control" id="livingroom">-->
-  				<input type="checkbox" name="yes" value="does have Basement"> Does have a Basement<br>
-  				<input type="checkbox" name="no" value="doesn't have Basement"> Doesn't have a Basement<br>
+  				<input id="id_basement" name="basement" type="checkbox" />
   			</div>
   			<div class="form-group">
-  				<label for="attic">Is there a Attic</label><br>
+  				<label for="id_attic">Attic:</label>
   				<!--<input type="text" class="form-control" id="livingroom">-->
-  				<input type="checkbox" name="yes" value="does have Attic"> Does have a Attic<br>
-  				<input type="checkbox" name="no" value="doesn't have Attic"> Doesn't have a Attic<br>
+  				<input id="id_attic" name="attic" type="checkbox" /> 
   			</div>
   			<div class="form-group">
-  				<label for="secondstorage">Is there a Secondary storage</label><br>
+  				<label for="id_secondary_storage">Secondary storage:</label>
   				<!--<input type="text" class="form-control" id="livingroom">-->
-  				<input type="checkbox" name="yes" value="does have Secondary storage"> Does have a Secondary storage<br>
-  				<input type="checkbox" name="no" value="doesn't have Secondary storage"> Doesn't have a Secondary storage<br>
+  				<input id="id_secondary_storage" name="secondary_storage" type="checkbox" />
   			</div>
   			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
@@ -174,28 +173,24 @@ on how to make a bootstrap website for cse442
         		<h4 class="modal-title">Utilities Info</h4>
       		</div>
       	<div class="modal-body">
-      	<form>
-
+    <form id="apartment_form" method="POST"/>
+{% csrf_token %}
   			<div class="form-group">
-  				<label for="included">Included Utilities</label><br>
+  				<label for="id_gas">Included Utilities</label>
   				<!--<input type="text" class="form-control" id="livingroom">-->
-  				<input type="checkbox" name="gas" value="includes gas"> Does include gas<br>
-  				<input type="checkbox" name="elec" value="includes elec"> Does include elec<br>
-  				<input type="checkbox" name="water" value="includes water"> Does include water<br>
-  				<input type="checkbox" name="heat" value="includes heat"> Does include heat<br>
-  				<input type="checkbox" name="cable/internet" value="includes cable/internet"> Does include cable/internet<br>
-  				<input type="checkbox" name="washer/dryer" value="includes washer/dryer"> Does include washer/dryer<br>
-  			</div>
-
-  			<div class="form-group">
-  				<label for="notincluded">Not Included Utilities</label><br>
-  				<!--<input type="text" class="form-control" id="livingroom">-->
-  				<input type="checkbox" name="gas" value="not includes gas"> Doesn't include gas<br>
-  				<input type="checkbox" name="elec" value="not includes elec"> Doesn't include elec<br>
-  				<input type="checkbox" name="water" value="not includes water"> Doesn't include water<br>
-  				<input type="checkbox" name="heat" value="not includes heat"> Doesn't include heat<br>
-  				<input type="checkbox" name="cable/internet" value="not includes cable/internet"> Doesn't include cable/internet<br>
-  				<input type="checkbox" name="washer/dryer" value="not includes washer/dryer"> Doesn't include washer/dryer<br>
+  				<input id="id_gas" name="gas" type="checkbox" /> 
+          <label for="id_electric">Electric</label>
+  				<input id="id_electric" name="electric" type="checkbox" /> 
+          <label for="id_water">Water:</label>
+  				<input id="id_water" name="water" type="checkbox" /> 
+          <label for="id_heat">Heat:</label>
+  				<input id="id_heat" name="heat" type="checkbox" /> 
+          <label for="id_dryer">Dryer:</label>
+  				<input id="id_dryer" name="cable/internet" type="checkbox" /> 
+          <label for="id_washer">Washer:</label>
+  				<input id="id_washer" name="washer" type="checkbox" /> 
+          <label for="id_garbage">Garbage:</label>
+          <input id="id_garbage" name="garbage" type="checkbox" /> 
   			</div>
   			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
@@ -221,17 +216,15 @@ on how to make a bootstrap website for cse442
         		<h4 class="modal-title">Parking Info</h4>
       		</div>
       	<div class="modal-body">
-      	<form>
+      	<form id="apartment_form" method="POST"/>
+        {% csrf_token %}
   			<div class="form-group">
-    			<label for="Parking">Is there Parking</label><br>
-    				<input type="checkbox" name="yes" value="does have Parking"> Does have a Parking spot<br>
-
-    				<input type="checkbox" name="no" value="doesn't have Parking"> Doesn't have a Parking<br>
+    			<label for="id_parking_offstreet">Parking Offstreet:</label>
+    				<input id="id_parking_offstreet" name="parking_offstreet" type="checkbox" />
+          <label for="id_parking_onstreet">Parking Onstreet:</label>
+    				<input id="id_parking_onstreet" name="parking_onstreet" type="checkbox" /> 
   			</div>
-  			<div class="form-group">
-  				<label for="numspot">Enter Number of spots</label>
-  				<input type="number" class="form-control" id="numspot">
-  			</div>
+  		</div>
   			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
      		 </div>
@@ -239,10 +232,10 @@ on how to make a bootstrap website for cse442
         			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       			</div>
     		</div>
+    </div>
+ 
 
- 		 </div>
-		</div>
-		</div>
+
 
 		<div class="container-fluid">
 		<!-- trigger the modal with a button -->
@@ -256,12 +249,11 @@ on how to make a bootstrap website for cse442
         		<h4 class="modal-title">Public Transit</h4>
       		</div>
       	<div class="modal-body">
-    <form>
+    <form id="apartment_form" method="POST"/>
+    {% csrf_token %}
         <div class="form-group">
-          <label for="Parking">Is public transit</label><br>
-            <input type="checkbox" name="yes" value="does have Parking"> Does have public transit<br>
-
-            <input type="checkbox" name="no" value="doesn't have Parking"> Doesn't have public transit<br>
+          <label for="id_public_transportation">Public transportation:</label>
+            <input id="id_public_transportation" name="public_transportation" type="checkbox" />
         </div>
   		
   			<button type="submit" class="btn btn-default">Submit</button>
@@ -275,3 +267,106 @@ on how to make a bootstrap website for cse442
  		 </div>
 		</div>
 		</div>
+
+    <div class="container-fluid">
+    <!-- trigger the modal with a button -->
+    <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#lan">LandLord</button></center>
+    <div id="lan" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">LandLord</h4>
+          </div>
+        <div class="modal-body">
+    <form id="apartment_form" method="POST"/>
+    {% csrf_token %}
+        <div class="form-group">
+          <label for="id_landlord">LandLord:</label>
+            <select id="id_landlord" name="landlord" required>
+            <option value="1">Evangelista</option>
+            </select>
+        </div>
+      
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+         </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+     </div>
+    </div>
+    </div>
+
+    <div class="container-fluid">
+    <!-- trigger the modal with a button -->
+    <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#pet">Pets</button></center>
+    <div id="pet" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Pets</h4>
+          </div>
+        <div class="modal-body">
+    <form id="apartment_form" method="POST"/>
+    {% csrf_token %}
+        <div class="form-group">
+          <label for="id_pets">Pets:</label>
+           <input id="id_pets" name="pets" type="checkbox" />
+        </div>
+      
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+         </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+     </div>
+    </div>
+    </div>
+
+    <div class="container-fluid">
+    <!-- trigger the modal with a button -->
+    <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#rent">Rent</button></center>
+    <div id="rent" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Rent</h4>
+          </div>
+        <div class="modal-body">
+    <form id="apartment_form" method="POST"/>
+    {% csrf_token %}
+        <div class="form-group">
+          <label for="id_avg_security_deposit">Avg security deposit:</label>
+           <input id="id_avg_security_deposit" name="avg_security_deposit" step="0.01" type="number" value="0" required />
+        </div>
+        <div>
+            <label for="id_avg_rent">Avg rent:</label>
+            <input id="id_avg_rent" name="avg_rent" step="0.01" type="number" value="0" required />
+        </div>
+      
+              <input type="submit" name="submit" value="Add Apartment"/>
+
+    </form>
+         </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+     </div>
+    </div>
+    </div>
+<input type="submit" name="submit" value="Add Apartment"/>
+    </body>
+    </html>

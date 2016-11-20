@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.template import RequestContext
 from django.forms import ModelForm
 from rentar.forms import ApartmentForm, ApartmentRatingForm
+from rentar.models import Apartment
 
 # Create your views here.
 def index(request):
@@ -43,7 +44,7 @@ def add_apartment_rating(request, pk):
 		form = ApartmentRatingForm(request.POST)
 
 		if form.is_valid():
-			form.save(commit = True)
+			rating = form.save(commit = True)
 			return index(request)
 		else:
 			print (form.errors)
@@ -51,3 +52,14 @@ def add_apartment_rating(request, pk):
 		form = ApartmentRatingForm()
 
 	return render(request,'add_apartment_rating.html', {'form':form}) #change name of html after merging maybe
+
+def edit_apartment(request, pk):
+	apartment = get_object_or_404(Apartment, pk=pk)
+	if request.method == "POST":
+		form = ApartmentForm(request.POST, instance=apartment)
+		if form.is_valid():
+			apartment = form.save(commit = True)
+			return index(request)
+	else:
+		form = ApartmentForm(instance=apartment)
+	return render(request, 'add_apartment.html', {'form':form})#possibly make different html for edit

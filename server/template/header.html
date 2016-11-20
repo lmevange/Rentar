@@ -22,7 +22,7 @@
 
 <body>
 
-    
+
     <div class="container-fluid">
         <div class="page-header">
             <center><img src="{% static 'img/fakelogo.png' %}" width="500" height="200" alt="logo"/></center>
@@ -36,9 +36,12 @@
                     <h3 class="navbar-text"> Rentar Raters</h3>
                     <li class="active"><a href="/">Home</a></li>
                     <li><a href="/login/">Login</a></li>
-                    <li><a href="/rating/">Ratings</a></li>
-                    <li><a href="/addressview/">Address</a></li>
+                    <li><a href="/add_apartment/">Rate an Apartment</a></li>
                     <li><a href="/contact/">Contact Us</a></li>
+                    <form class="navbar-form navbar-left" role="search">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                  </form>
                 </ul>
             </div>
         </nav>

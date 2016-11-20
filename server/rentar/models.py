@@ -78,6 +78,3 @@ class Apartment_Rating(models.Model):
 	comment = models.TextField(max_length = 400)
 	def __str__(self):
 	   return str(id)
-
-    def __str__(self):
-        return "Rating: " + str(id) + " for " + str(landlord)

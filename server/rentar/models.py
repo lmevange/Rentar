@@ -49,7 +49,7 @@ class Apartment(models.Model):
 ##################
 class Apartment_Rating(models.Model):
 	#info on rent
-	apartment = models.ForeignKey(Apartment,editable=False, on_delete=models.CASCADE) #if apartment is deleted delete this too
+	apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE, blank=True) #if apartment is deleted delete this too
 	#landlord = models.ForeignKey(Landlord)
 
 	move_in_date = models.DateField()

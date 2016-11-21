@@ -1,0 +1,22 @@
+{% extends 'header.html' %}
+{% block body%}
+{%load static%}
+
+<body>
+{% if results %}
+  {% for result in results %}
+    {{ result.pk }}
+    {{ result.address_line }}
+    {{ result.city }}
+    {{ result.state }}
+  {% endfor %}
+{% else %}
+    <h3 class='error'>Please enter a valid PK</h3>
+    <form method="get" action="/search/">
+      Search Notecards:<input type="text" name="q" id="id_q" value="{{ query }}"/>
+      <input type="submit" value="Search" />
+    </form>
+{% endif %}
+</body>
+
+{% endblock %}

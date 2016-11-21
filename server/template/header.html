@@ -54,9 +54,15 @@ $(function(){
                 <ul class="nav navbar-nav">
                     <h3 class="navbar-text"> Rentar Raters</h3>
                     <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/add_apartment/">Add an Apartment</a></li>
+                    <li><a href="/apartment_view/">Apartments</a></li>
                     <li><a href="/contact/">Contact Us</a></li>
-		  </ul>
+                 </ul>
+                <div class="col-sm-1 col-md-6">
+                    <form class="navbar-form" method="get" action="/search/">
+                        <font size="3">Search Apartments:</font><input type="text" name="q" id="id_q" value="{{ query }}" />
+                        <input type="submit" value="Search" />
+                        </form>
+                </div>
                     {% if not request.user.is_authenticated %}
                         <ul class="nav navbar-nav navbar-right" style="float:right">
                             <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>

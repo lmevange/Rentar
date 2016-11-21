@@ -3,7 +3,10 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from django.forms import ModelForm, HiddenInput
 from rentar.forms import ApartmentForm, ApartmentRatingForm
-from rentar.models import Apartment, Apartment_Rating
+from rentar.models import Apartment
+from django.db.models import Q
+import operator
+from functools import reduce
 from django.contrib.auth import (
 	authenticate,
 	get_user_model,
@@ -37,6 +40,63 @@ def rating(request):
 
 def registration_form(request):
 	return render(request,'registration_form.html')
+
+#this is not great but I dont care. dont break it.
+def normalize(string):
+    string2 = string
+    terms = []
+    x=0
+    y=0
+    count=1
+    index= 0
+    quote = False
+    for j in string:
+        if j =="\"" and count !=2 :
+            count +=1
+            x=index
+        elif j == "\"" and count == 2 :
+            y=index
+            count = 1
+            terms.append(string[x+1:y])
+            string = string[y:]
+            index =0
+        index+=1
+    index = 0
+    string2 = string2.split( )
+    for j in string2:
+        if "\"" in j and count !=2 :
+            quote = True
+            count+=1
+        elif "\"" in j and count == 2 :
+            quote = False
+            count =1
+        elif not quote:
+            terms.append(j)
+    return terms
+
+def search(request):
+	qry_string=''
+	qry_string = request.GET.get('q')
+	if (qry_string !=""):
+		qry_list = normalize(qry_string)
+		results = Apartment.objects.all()
+		results = results.filter(
+                reduce(operator.or_,
+                       (Q(address_line__icontains=q) for q in qry_list)) |
+                reduce(operator.or_,
+                       (Q(city__icontains=q) for q in qry_list)) |
+                reduce(operator.or_,
+                       (Q(state__icontains=q) for q in qry_list)) |
+                reduce(operator.or_,
+                       (Q(landlord_last_name__icontains=q) for q in qry_list)) |
+                reduce(operator.or_,
+                       (Q(zipcode__icontains=q) for q in qry_list)) |
+                reduce(operator.or_,
+                       (Q(landlord_company__icontains=q) for q in qry_list))
+            )
+	else:
+		results = None
+	return render(request,'results.html', {"results":results})
 
 def add_apartment(request):
 	context = RequestContext(request)

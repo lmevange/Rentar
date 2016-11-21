@@ -59,8 +59,9 @@ $(function(){
                 <li> <form method="get" action="/search/" align="bottom" >
                   Search Apartments:<input type="text" name="q" id="id_q" value="{{ query }}" />
                   <input type="submit" value="Search" />
+                </form>
                 </li>
-		 </form>
+
 		  </ul>
                     {% if not request.user.is_authenticated %}
                         <ul class="nav navbar-nav navbar-right" style="float:right">

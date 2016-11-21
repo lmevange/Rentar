@@ -76,14 +76,17 @@ html, body {
 	width: 345px;
 }
 	</style>
-
+<!--
 	<script src='{% static "js/googleautocomplete.js" %}'></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMOmPLGoFdmb2OrswKsqz-cehbMG3jJdA&libraries=places&&callback=initAutocomplete"
 			async defer></script>
+-->
 
-
-	<input id="pac-input" class="controls" type="text" placeholder="Search Box">
-	<div id="map"></div>
+	<div><form method="get" action="/search/">
+                  Search Apartments:<input type="text" name="q" id="id_q" value="{{ query }}" />
+                  <input type="submit" value="Search" />
+        </form>
+    </div>
 	<center>
 		<img src='{% static "img/homepagepic.jpg" %}' class='img-responsive' alt="My image"/>
 	</center>

@@ -35,17 +35,12 @@ def registration_form(request):
 	return render(request,'registration_form.html')
 
 def search(request):
-        qry = request.GET.get('q')
-        try:
-                qry = int(qry)
-        except ValueError:
-                qry = None
-                results = None
-        if qry:
-                results = Apartment.objects.get(pk=qry)
-        #context = RequestContext(request)
-        return render(request,'results.html', {"results":results})
-
+	qry_string=''
+	found_objects = None
+	qry_string = request.GET.get('q')
+	if (qry_string !=''):
+		results= Apartment.objects.filter(address_line__contains=qry)
+	return render(request,'results.html', {"results":results})
 
 def add_apartment(request):
 	context = RequestContext(request)

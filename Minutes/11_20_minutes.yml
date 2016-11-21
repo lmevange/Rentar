@@ -1,0 +1,18 @@
+date: November 20, 2016
+meeting_type: group
+attendance: [<lmevange>, <jacascio>, <grlandon>, <mmfraser>]
+absent: []
+excused_absences: [
+
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, progress: Helped group get accustomed to the new user class that was finished yesterday},
+  {ubit: <jacascio>, progress: implemented queries and enabled the search bars on the pages},
+  {ubit: <lmevange>, progress: finished cleaning up the apartment landlord combine, fixed several pages that either werent working or cleaned them up to work better},
+  {ubit: <grlandon>, progress: Worked on displaying data from apartments after searched and worked on moduels to make the forms work and look better},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <lmevange>, we did it}
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  

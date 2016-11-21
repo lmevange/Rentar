@@ -41,7 +41,7 @@ $(function(){
 
 <body>
 
-    
+
     <div class="container-fluid">
         <div class="page-header">
             <center><img src="{% static 'img/fakelogo.png' %}" width="500" height="200" alt="logo"/></center>
@@ -58,6 +58,10 @@ $(function(){
                     <li><a href="/addressview/">Address</a></li>
                     <li><a href="/contact/">Contact Us</a></li>
                 </ul>
+                <form method="get" action="/search/">
+                  Search Apartments:<input type="text" name="q" id="id_q" value="{{ query }}"/>
+                  <input type="submit" value="Search" />
+                  </form>
                     {% if not request.user.is_authenticated %}
                         <ul class="nav navbar-nav navbar-right" style="float:right">
                             <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -67,11 +71,11 @@ $(function(){
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user">{{user.username}}</span><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{% url 'edit_profile' %}">Edit Profile</a></li>                        
+                                    <li><a href="{% url 'edit_profile' %}">Edit Profile</a></li>
                                     <li><a href="{% url 'logout' %}">Logout</a></li>
-                                </ul> 
+                                </ul>
                             </li>
-                        </ul>                                 
+                        </ul>
                     {% endif %}
             </div>
         </nav>

@@ -18,7 +18,8 @@ from rentar.forms import UserLoginForm, UserRegisterForm, UserProfileForm
 # Create your views here.
 def index(request):
 	return render(request, 'index.html')
-
+def page_404(request):
+	return render(request, '404.html')
 def login(request):
 	return render(request, 'login.html')
 

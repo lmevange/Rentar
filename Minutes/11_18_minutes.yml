@@ -1,0 +1,18 @@
+date: November 18, 2016
+meeting_type: group
+attendance: [<lmevange>, <jacascio>, <grlandon>]
+absent: []
+excused_absences: [
+{ubit: <mmfraser>, reason: was just a backend meeting so they were not invited},
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  {ubit: <mmfraser>, },
+  {ubit: <jacascio>, progress: collaborated with Leo to reformat the objects and there relationships, we merged landlord and apatement into one},
+  {ubit: <lmevange>, progress: collaborated with Joe  to combine apartment and landlord and rename it as just apartment, one a one to many relationship with its ratings},
+  {ubit: <grlandon>, progress: worked on finding a good format for the nodels for the forms page that would work as intended},
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  {ubit: <lmevange>, issue: had some trouble at first after initial co mbine but we seemed to have ironed it out}
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  Malcom seems to have finished the user class so thats good

@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 SITE_ID=1
 # Application definition
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
 INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.admin',
@@ -40,7 +42,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rentar.apps.RentarConfig',
+    'crispy_forms',
 ]
+
+#TEMPLATE_CONTEXT_PROCESSORS = (
+#    "django.core.context_processors.auth",
+#    "django.core.context_processors.debug",
+#    "django.core.context_processors.i18n",
+#    "django.core.context_processors.media",
+#    "django.core.context_processors.request",
+#)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

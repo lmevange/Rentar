@@ -1,0 +1,29 @@
+{% extends 'header.html' %}
+{% block body%}
+{%load static%}
+
+<body>
+{% if results %}
+  {% for result in results %}
+    {{ result.address_line }}<br>
+    {{ result.city }}
+    {{ result.state }}
+    {{ result.zipcode}}
+    <br>
+    <p>Landlord: {{ result.landlord_last_name}} </p>
+    <br>
+    <a class="btn btn-default" href="/apartment_view/{{result.pk}}/">View Apartment</a>
+    <a class="btn btn-default" href="/edit_apartment/{{result.pk}}/">Edit Apartment</a>
+    <a class="btn btn-default" href="/add_apartment_rating/{{result.pk}}/">Rate Apartment</a><br><br>
+  {% endfor %}
+{% else %}
+    <h3 class='error'>Could not find apartment. Try again or add new apartment</h3>
+    <a class="btn btn-default" href="/add_apartment/">Add Apartment</a>
+    <form method="get" action="/search/">
+      Search Apartments:<input type="text" name="q" id="id_q" value="{{ query }}"/>
+      <input type="submit" value="Search" />
+    </form>
+{% endif %}
+</body>
+
+{% endblock %}

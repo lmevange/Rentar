@@ -1,0 +1,104 @@
+{% extends 'header.html' %}
+{% block body %}
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<body>
+<center>
+<div class="apt_view">
+{% csrf_token %}
+
+
+
+
+<u>Location</u><br>
+Adress: {{apt_view.address_line}}<br>
+City: {{apt_view.city}}<br>
+State: {{apt_view.state}}<br>
+Zipcode: {{apt_view.zipcode}}<br>
+{{apt_rate.move_in_date}}
+<br>
+<u>Layout</u>
+<br>
+Bedrooms: {{apt_view.bedrooms}}<br>
+Bathrooms: {{apt_view.bathrooms}}<br>
+{% if apt_view.living_room != False %}
+Living room<br>
+{% endif %}
+{% if apt_view.basement != False %}
+Basement<br>
+{% endif %}
+{% if apt_view.attic != False %}
+Attic<br>
+{% endif %}
+{% if apt_view.secondary_storage != False %}
+Secondary Storage<br>
+{% endif %}
+<br>
+<u>Included Utilities</u>
+<br>
+{% if apt_view.water != False %}
+Water<br>
+{% endif %}
+{% if apt_view.heat != False %}
+Heat<br>
+{% endif %}
+{% if apt_view.electric != False %}
+Electric<br>
+{% endif %}
+{% if apt_view.garbage != False %}
+Garbage<br>
+{% endif %}
+{% if apt_view.washer != False %}
+Washer<br>
+{% endif %}
+{% if apt_view.dryer != False %}
+Dryer<br>
+{% endif %}
+<br>
+<u>Pets</u>
+<br>
+{% if apt_view.pets != False %}
+Allowed<br>
+{% else %}
+Not Allowed<br>
+{% endif %}
+<br>
+<u>Parking</u>
+<br>
+{% if apt_view.parking_onstreet != False %}
+On street<br>
+{% endif %}
+{% if apt_view.parking_offstreet != False %}
+Off street<br>
+{% endif %}
+<br>
+<u>Public transportation</u>
+<br>
+{% if apt_view.public_transportation != False %}
+Accessable<br>
+{% else %}
+Not accessable
+{% endif %}
+
+<br>
+<u>Landlord</u><br>
+Fist name: {{apt_view.landlord_first_name}}<br>
+Lanst name: {{apt_view.landlord_last_name}}<br>
+Comapany: {{apt_view.landlord_company}}<br>
+
+
+
+
+</div>
+</center>
+</body>
+
+{% endblock %}

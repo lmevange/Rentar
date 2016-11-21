@@ -1,27 +1,177 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Rentar</title>
-    </head>
+{% extends 'header.html' %}
+{% block body %}
+
+{% load static %}
+
+
+  
+      
+        <!--
+            to ensure proper rendering and touch zooming, add the 
+            following <meta> tag inside the <head> element:
+            here insie this area where this note is
+
+        -->
+        
+
+        <!--
+            the width=deviceo-width part sets the width of the page to follow the screen-width of the device
+            which will vary depending on the device
+            the initial-scale=1 part sets the intial zoom level when the page is first laoded by the browser
+        -->
+
+        <!--
+            these are the CDN used for rendering bootstrap features they are usaully found here in the 
+            head tags
+        -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+
 
     <body>
-        <h1>Rate an Apartment</h1>
+       <center><h1>Add Apartment Rating</h1></center>
+        <div class="container-fluid">
+        <center><button type="button" class="btn btn-info btn-lg" id="addressbtn" data-toggle="modal" data-target="#myModal">Address_ratings</button></center>
+        <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Address Info</h4>
+            </div>
+        <div class="modal-body">
+        <form id="apartment_rating_form" method="POST"/>
+        {% csrf_token %}
 
-        <form id="apartment_rating_form" method="POST"/><!-- for some reason this action is needed. makes url weird, but it posts to database-->
-
-            {% csrf_token %}
-            <!-- {% for hidden in form.hidden_fields %}
-                {{ hidden }}
-            {% endfor %} -->
-
-            {% for field in form.visible_fields %}
+            <div class="form-group">
+                <label for="{{form.move_in_date.id_move_in_date}}">Movin Date:</label>
+                    {{form.move_in_date}}
+                    {{ field.errors }}
+                    
+            </div>
+            <div class="form-group">
+                <label for="{{form.years_lived.id_years_lived}}">Years lived here:</label>
+                {{form.years_lived}}
                 {{ field.errors }}
-		{{ field.label_tag }}
-                {{ field.help_text }}
-                {{ field }}
-            {% endfor %}
-	    <input type="submit" name="submit" value="Add Apartment Rating"/>
-	</form>
+            </div>
+            <div class="form-group">
+                <label for="{{form.starting_rent.id_starting_rent}}">Starting Rent:</label>
+                {{form.starting_rent}}
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.ending_rent.id_ending_rent}}">Ending Rent:</label>
+                {{form.ending_rent}}
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.security_deposit.id_security_deposit}}">Security Deposit:</label>
+                    {{form.security_deposit}}
+                    {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.pet_fee.id_pet_fee}}">Pet Fee:</label>
+                {{form.pet_fee}}
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.water.id_water}}">Water:</label>
+                <!--<input type="text" class="form-control" id="livingroom">-->
+                {{form.water}}
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.heat.id_heat}}">Heat:</label>
+                <!--<input type="text" class="form-control" id="livingroom">-->
+                {{form.heat}} 
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.electric.id_electric}}">Electric:</label>
+                <!--<input type="text" class="form-control" id="livingroom">-->
+                {{form.electric}}
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.garbage.id_garbage}}">Garbage:</label>
+                <!--<input type="text" class="form-control" id="livingroom">-->
+                {{form.garbage}} 
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <label for="{{form.parking.id_parking}}">Parking:</label>
+                <!--<input type="text" class="form-control" id="livingroom">-->
+                {{form.parking}}
+                {{ field.errors }}
+            </div>
+
+
+            <div class="form-group">
+                  <label for="{{form.neighborhood.id_neighborhood}}">Neighborhood:</label>
+                     {{form.neighborhood}}
+                     {{ field.errors }}
+             </div>
+                <div class="form-group">
+                     <label for="{{form.location.id_location}}">Location:</label>
+                  {{form.location}}
+                  {{ field.errors }}
+             </div>
+             <div class="form-group">
+                 <label for="{{form.landlord_maintenance.id_landlord_maintenance}}">Landlord maintenance:</label>
+                    {{form.landlord_maintenance}}
+                    {{ field.errors }}
+             </div>
+
+      <div class="form-group">
+                 <label for="{{form.landlord_hot.id_landlord_hot}}">Landlord HOT!!!:</label>
+                    {{form.landlord_hot}}
+                    {{ field.errors }}
+             </div>
+
+      <div class="form-group">
+                 <label for="{{form.landlord_privacy.id_landlord_privacy}}">Landlord privacy:</label>
+                    {{form.landlord_privacy}}
+                    {{ field.errors }}
+             </div>
+
+      <div class="form-group">
+                 <label for="{{form.landlord_responsiveness.id_landlord_responsiveness}}">Landlord responsiveness:</label>
+                    {{form.landlord_responsiveness}}
+                    {{ field.errors }}
+        </div>
+
+      <div class="form-group">
+                 <label for="{{form.comment.id_comment}}">Comment:</label>
+                    {{form.comment}}
+                    {{ field.errors }}
+             </div>
+              
+            <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+		 </div>
+                 <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    
+
+                </div>
+            </div>
+
+         </div>
+        </div>
+        </div>
+       <center>
+                <img src='{% static "img/homepagepic.jpg" %}' class='img-responsive' alt="My image"/>
+        </center>
+       
     </body>
 
-</html>
+
+{% endblock %}

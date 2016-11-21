@@ -56,10 +56,10 @@ $(function(){
                     <li class="active"><a href="/">Home</a></li>
                     <li><a href="/add_apartment/">Add an Apartment</a></li>
                     <li><a href="/contact/">Contact Us</a></li>
-                <li> <form method="get" action="/search/" align="top" >
-                  Search Apartments:<input type="text" name="q" id="id_q" value="{{ query }}" />
-                  <input type="submit" value="Search" />
-                </form>
+                <li> <input type="text" formmethod="GET" formaction="/search/" name = "q" value="{{query}}" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                    </span>
                 </li>
 
 		  </ul>

@@ -1,62 +1,104 @@
 {% extends 'header.html' %}
 {% block body %}
 
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Street View side-by-side</title>
-        <style>
-          html, body {
-            height: 50%;
-            margin: 0;
-            padding: 0;
-          }
-          #map, #pano {
-            float: left;
-            height: 100%;
-            width: 45%;
-          }
-          #rate{
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-          }
-        </style>
-      </head>
-          <h1>
-              Address
-          </h1>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-        <div id="map"></div>
-        <div id="pano"></div>
-        <script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-          function initialize() {
-            var fenway = {lat: 43.0008, lng: -78.7890};
-            var map = new google.maps.Map(document.getElementById('map'), {
-              center: fenway,
-              zoom: 14
-            });
-            var panorama = new google.maps.StreetViewPanorama(
-                document.getElementById('pano'), {
-                  position: fenway,
-                  pov: {
-                    heading: 34,
-                    pitch: 10
-                  }
-                });
-            map.setStreetView(panorama);
-          }
-        </script>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMOmPLGoFdmb2OrswKsqz-cehbMG3jJdA&callback=initialize">
-        </script>
 
-        <center>
-        <form  action="pages/address-view.html" method="get">
-            <input type="submit" value="rate"
-                  name="rate" id="frm1_submit" />
-        </form>
-        </center>
+<body>
+<center>
+<div class="apt_view">
+{% csrf_token %}
 
-    </html>
+
+
+
+<u>Location</u><br>
+Adress: {{apt_view.address_line}}<br>
+City: {{apt_view.city}}<br>
+State: {{apt_view.state}}<br>
+Zipcode: {{apt_view.zipcode}}<br>
+{{apt_rate.move_in_date}}
+<br>
+<u>Layout</u>
+<br>
+Bedrooms: {{apt_view.bedrooms}}<br>
+Bathrooms: {{apt_view.bathrooms}}<br>
+{% if apt_view.living_room != False %}
+Living room<br>
+{% endif %}
+{% if apt_view.basement != False %}
+Basement<br>
+{% endif %}
+{% if apt_view.attic != False %}
+Attic<br>
+{% endif %}
+{% if apt_view.secondary_storage != False %}
+Secondary Storage<br>
+{% endif %}
+<br>
+<u>Included Utilities</u>
+<br>
+{% if apt_view.water != False %}
+Water<br>
+{% endif %}
+{% if apt_view.heat != False %}
+Heat<br>
+{% endif %}
+{% if apt_view.electric != False %}
+Electric<br>
+{% endif %}
+{% if apt_view.garbage != False %}
+Garbage<br>
+{% endif %}
+{% if apt_view.washer != False %}
+Washer<br>
+{% endif %}
+{% if apt_view.dryer != False %}
+Dryer<br>
+{% endif %}
+<br>
+<u>Pets</u>
+<br>
+{% if apt_view.pets != False %}
+Allowed<br>
+{% else %}
+Not Allowed<br>
+{% endif %}
+<br>
+<u>Parking</u>
+<br>
+{% if apt_view.parking_onstreet != False %}
+On street<br>
+{% endif %}
+{% if apt_view.parking_offstreet != False %}
+Off street<br>
+{% endif %}
+<br>
+<u>Public transportation</u>
+<br>
+{% if apt_view.public_transportation != False %}
+Accessable<br>
+{% else %}
+Not accessable
+{% endif %}
+
+<br>
+<u>Landlord</u><br>
+Fist name: {{apt_view.landlord_first_name}}<br>
+Lanst name: {{apt_view.landlord_last_name}}<br>
+Comapany: {{apt_view.landlord_company}}<br>
+
+
+
+
+</div>
+</center>
+</body>
 
 {% endblock %}

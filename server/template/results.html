@@ -10,12 +10,11 @@
     {{ result.state }}
     {{ result.zipcode}}
     <br>
-    <p>Landlord: </p>
-    {{ result.landlord_last_name}}
+    <p>Landlord: {{ result.landlord_last_name}} </p>
     <br>
     <a class="btn btn-default" href="/apartment_view/{{result.pk}}/">View Apartment</a>
     <a class="btn btn-default" href="/edit_apartment/{{result.pk}}/">Edit Apartment</a>
-    <a class="btn btn-default" href="/add_apartment_rating/{{result.pk}}/">Rate Apartment</a>
+    <a class="btn btn-default" href="/add_apartment_rating/{{result.pk}}/">Rate Apartment</a><br><br>
   {% endfor %}
 {% else %}
     <h3 class='error'>Could not find apartment. Try again or add new apartment</h3>

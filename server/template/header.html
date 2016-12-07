@@ -47,36 +47,43 @@ $(function(){
             <center><img src="{% static 'img/fakelogo.png' %}" width="500" height="200" alt="logo"/></center>
         </div>
     </div>
-
-    <div class="container">
         <nav class="navbar navbar-default">
-            <div class="container-fluid">
+			<div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <h3 class="navbar-text"> Rentar Raters</h3>
-                    <li class="active"><a href="/">Home</a></li>
+                    <a class="navbar-brand" href="/"><b>Rentar</b></a>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/add_apartment/">Add Apartment</a></li>
                     <li><a href="/contact/">Contact Us</a></li>
                  </ul>
+			<div class="col-sm-3 col-md-3">
+	    		<form class="navbar-form" method="get" action="/search/">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search Apartments" name="q" id="id_q" value="{{ query }}" />
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit">Search</button>
+					</div>
+				</div>
+                </form>
+             </div>
                 <ul class="nav navbar-nav navbar-right">
-	    		<li><form class="navbar-form" method="get" action="/search/">
-                        <font size="3">Search Apartments:</font><input type="text" name="q" id="id_q" value="{{ query }}" />
-                        <input type="submit" value="Search" />
-                        </form></li>
-                    {% if not request.user.is_authenticated %}
-                            <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    {% else %}
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user">{{user.username}}</span><span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{% url 'edit_profile' %}">Edit Profile</a></li>
-                                    <li><a href="{% url 'logout' %}">Logout</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    {% endif %}
-            </div>
+						{% if not request.user.is_authenticated %}
+					<li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						{% else %}
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user">{{user.username}}</span><span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="{% url 'edit_profile' %}">Edit Profile</a></li>
+							<li><a href="{% url 'logout' %}">Logout</a></li>
+						</ul>
+					</li>
+						{% endif %}
+                </ul>
+			</div>
         </nav>
+        <div class="container-fluid">
         {% block body %}
+        </div>
         {% endblock %}
     </div>
+    <center><h6>Powered by Django and Bootstrap.</h6></center>
 </body>

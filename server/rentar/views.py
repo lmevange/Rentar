@@ -126,7 +126,7 @@ def add_apartment_rating(request, pk):
 			rating.apartment=Apartment.objects.get(id=pk) 
 			rating.save()
 			apt_view = get_object_or_404(Apartment,pk=pk)
-			return render(request, 'apartment_view.html',{'apt_view':apt_view})
+			return redirect('apartment_view', apt_view.pk)
 		else:
 			print (form.errors)
 	else:
@@ -141,7 +141,7 @@ def edit_apartment(request, pk):
 		if form.is_valid():
 			apartment = form.save(commit = True)
 			apt_view = get_object_or_404(Apartment,pk=pk)
-			return render(request, 'apartment_view.html',{'apt_view':apt_view})
+			return redirect('apartment_view',apt_view.pk)
 		else:
 			print (form.errors)
 	else:

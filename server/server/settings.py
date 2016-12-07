@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rentar.apps.RentarConfig',
     'crispy_forms',
+    'mathfilters',
 ]
 
 #TEMPLATE_CONTEXT_PROCESSORS = (

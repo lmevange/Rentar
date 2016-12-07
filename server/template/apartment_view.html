@@ -11,94 +11,115 @@
 
 
 <body>
-<center>
-<div class="apt_view">
-{% csrf_token %}
+	<center>
+		<div class="apt_view">
+		{% csrf_token %}
 
 
 
 
-<u>Location</u><br>
-Adress: {{apt_view.address_line}}<br>
-City: {{apt_view.city}}<br>
-State: {{apt_view.state}}<br>
-Zipcode: {{apt_view.zipcode}}<br>
-{{apt_rate.move_in_date}}
-<br>
-<u>Layout</u>
-<br>
-Bedrooms: {{apt_view.bedrooms}}<br>
-Bathrooms: {{apt_view.bathrooms}}<br>
-{% if apt_view.living_room != False %}
-Living room<br>
-{% endif %}
-{% if apt_view.basement != False %}
-Basement<br>
-{% endif %}
-{% if apt_view.attic != False %}
-Attic<br>
-{% endif %}
-{% if apt_view.secondary_storage != False %}
-Secondary Storage<br>
-{% endif %}
-<br>
-<u>Included Utilities</u>
-<br>
-{% if apt_view.water != False %}
-Water<br>
-{% endif %}
-{% if apt_view.heat != False %}
-Heat<br>
-{% endif %}
-{% if apt_view.electric != False %}
-Electric<br>
-{% endif %}
-{% if apt_view.garbage != False %}
-Garbage<br>
-{% endif %}
-{% if apt_view.washer != False %}
-Washer<br>
-{% endif %}
-{% if apt_view.dryer != False %}
-Dryer<br>
-{% endif %}
-<br>
-<u>Pets</u>
-<br>
-{% if apt_view.pets != False %}
-Allowed<br>
-{% else %}
-Not Allowed<br>
-{% endif %}
-<br>
-<u>Parking</u>
-<br>
-{% if apt_view.parking_onstreet != False %}
-On street<br>
-{% endif %}
-{% if apt_view.parking_offstreet != False %}
-Off street<br>
-{% endif %}
-<br>
-<u>Public transportation</u>
-<br>
-{% if apt_view.public_transportation != False %}
-Accessable<br>
-{% else %}
-Not accessable
-{% endif %}
+		<u>Location</u><br>
+		Adress: {{apt_view.address_line}}<br>
+		City: {{apt_view.city}}<br>
+		State: {{apt_view.state}}<br>
+		Zipcode: {{apt_view.zipcode}}<br>
+		{{apt_rate.move_in_date}}
+		<br>
+		<u>Layout</u>
+		<br>
+		Bedrooms: {{apt_view.bedrooms}}<br>
+		Bathrooms: {{apt_view.bathrooms}}<br>
+		{% if apt_view.living_room != False %}
+		Living room<br>
+		{% endif %}
+		{% if apt_view.basement != False %}
+		Basement<br>
+		{% endif %}
+		{% if apt_view.attic != False %}
+		Attic<br>
+		{% endif %}
+		{% if apt_view.secondary_storage != False %}
+		Secondary Storage<br>
+		{% endif %}
+		<br>
+		<u>Included Utilities</u>
+		<br>
+		{% if apt_view.water != False %}
+		Water<br>
+		{% endif %}
+		{% if apt_view.heat != False %}
+		Heat<br>
+		{% endif %}
+		{% if apt_view.electric != False %}
+		Electric<br>
+		{% endif %}
+		{% if apt_view.garbage != False %}
+		Garbage<br>
+		{% endif %}
+		{% if apt_view.washer != False %}
+		Washer<br>
+		{% endif %}
+		{% if apt_view.dryer != False %}
+		Dryer<br>
+		{% endif %}
+		
+		{% if apt_view.water == False %}
+			{% if apt_view.heat == False %}
+				{% if apt_view.electric == False %}
+					{% if apt_view.garbage == False %}
+						{% if apt_view.washer == False %}
+							{% if apt_view.dryer == False %}
+							<p>None</p>
+							{% endif %}
+						{% endif %}
+					{% endif %}
+				{% endif %}
+			{% endif %}
+		{% endif %}
 
-<br>
-<u>Landlord</u><br>
-Fist name: {{apt_view.landlord_first_name}}<br>
-Lanst name: {{apt_view.landlord_last_name}}<br>
-Comapany: {{apt_view.landlord_company}}<br>
+		<u>Pets</u>
+		<br>
+		{% if apt_view.pets != False %}
+		Allowed<br>
+		{% else %}
+		Not Allowed<br>
+		{% endif %}
+		<br>
+		<u>Parking</u>
+		<br>
+		{% if apt_view.parking_onstreet != False %}
+		On street<br>
+		{% endif %}
+		{% if apt_view.parking_offstreet != False %}
+		Off street<br>
+		{% endif %}
+		
+		{% if apt_view.parking_onstreet == False %}
+			{% if apt_view.parking_offstreet == False %}
+				<p>None</p>
+			{% endif %}
+		{% endif %}
+
+		<u>Public transportation</u>
+		<br>
+		{% if apt_view.public_transportation != False %}
+		Accessable<br>
+		{% else %}
+		Not accessable
+		{% endif %}
+		<br>
+
+		<br>
+		<u>Landlord</u><br>
+		Fist name: {{apt_view.landlord_first_name}}<br>
+		Lanst name: {{apt_view.landlord_last_name}}<br>
+		Comapany: {{apt_view.landlord_company}}<br>
+		<a class="btn btn-default" href="/add_apartment_rating/{{apt_view.pk}}/">Rate Apartment</a><br>
 
 
 
-
-</div>
-</center>
+		</div>
+	</center>
 </body>
 
 {% endblock %}

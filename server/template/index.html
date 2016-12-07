@@ -82,27 +82,23 @@ html, body {
 			async defer></script>
 -->
 
-	<div> <form method="get" action="/search/" align = "center" style="width: 100%;" >
-		<font size="22" color = "#FFA500" ><b> Search Apartments</b></font><br> <input type="text" name="q" id="id_q" value="{{ query }}" />
-                  <input type="submit" value="Search" />
-        </form>
+	<div class= "container-fluid"> 
+		<CENTER>
+			<h4>Rentar is a website for renters to look up reliable information on an apartment they were thinking of moving into. <br>
+			Previous tenants can share their experience about their landlords so that others can make informed decisions on where to move.
+			</h4>
+			<form method="get" action="/search/" align = "center" style="width: 100%;" >
+				<font size="22" color = "#FFA500" ><b> Search Apartments</b></font>
+				<p>Search already rated apartments. If your apartment isn't found add it by clicking "Add Apartment" above.</p>
+				<input type="text" name="q" id="id_q" value="{{ query }}" />
+				<input type="submit" value="Search" />
+			</form>
+        </CENTER>
     </div>
 	<center>
 		<img src='{% static "img/homepagepic.jpg" %}' class='img-responsive' alt="My image"/>
 	</center>
 
-	<div class="container">
-		<div class="mission-statement">
-			<center>
-			<h1>
-				Rentar is for apartment renters
-			</h1>
-			<p>
-				This site is used to find out information about an apartment that you are considering to rent.
-			</p>
-			</center>
-		</div>
-	</div>
 {% endblock %}
 
 <!-- <footer>

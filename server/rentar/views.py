@@ -124,7 +124,8 @@ def add_apartment_rating(request, pk):
 			rating = form.save(commit = False)
 			rating.apartment=Apartment.objects.get(id=pk) 
 			rating.save()
-			return index(request)
+			apt_view = get_object_or_404(Apartment,pk=pk)
+			return render(request, 'apartment_view.html',{'apt_view':apt_view})
 		else:
 			print (form.errors)
 	else:
@@ -138,10 +139,13 @@ def edit_apartment(request, pk):
 		form = ApartmentForm(request.POST, instance=apartment)
 		if form.is_valid():
 			apartment = form.save(commit = True)
-			return index(request)
+			apt_view = get_object_or_404(Apartment,pk=pk)
+			return render(request, 'apartment_view.html',{'apt_view':apt_view})
+		else:
+			print (form.errors)
 	else:
 		form = ApartmentForm(instance=apartment)
-	return render(request, 'add_apartment.html', {'form':form})#possibly make different html for edit
+	return render(request, 'edit_apartment.html', {'form':form})#possibly make different html for edit
 
 def login_view(request):
 	title = "Login"

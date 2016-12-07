@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from django.forms import ModelForm, HiddenInput
 from rentar.forms import ApartmentForm, ApartmentRatingForm
-from rentar.models import Apartment
+from rentar.models import Apartment, Apartment_Rating
 from django.db.models import Q
 import operator
 from functools import reduce
@@ -29,8 +29,9 @@ def login(request):
 def apartment_view(request,pk):
 
 	apt_view = get_object_or_404(Apartment,pk=pk)
-	#apt_rate = Apartment_Rating.objects.get(apartment__pk = pk)
-	return render(request, 'apartment_view.html',{'apt_view':apt_view})
+	apt_ratings = Apartment_Rating.objects.select_related('apartment')[:5]
+        #apt_rate = Apartment_Rating.objects.get(apartment__pk = pk)
+	return render(request, 'apartment_view.html',{'apt_view':apt_view, 'apt_ratings':apt_ratings})
 
 def contact(request):
 	return render(request, 'contact.html')

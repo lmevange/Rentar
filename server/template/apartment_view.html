@@ -15,8 +15,9 @@
 		<div class="apt_view">
 		{% csrf_token %}
 
-
-
+		{% for rating in apt_ratings %}
+			<h3>{{rating.move_in_date}}</h3>
+		{% endfor %}
 
 		<u>Location</u><br>
 		Adress: {{apt_view.address_line}}<br>

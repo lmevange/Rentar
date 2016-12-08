@@ -29,7 +29,7 @@ def login(request):
 def apartment_view(request,pk):
 
 	apt_view = get_object_or_404(Apartment,pk=pk)
-	apt_ratings = Apartment_Rating.objects.select_related('apartment')[:5]
+	apt_ratings = Apartment_Rating.objects.select_related('apartment').order_by('-move_in_date')[:5]
         #apt_rate = Apartment_Rating.objects.get(apartment__pk = pk)
 	return render(request, 'apartment_view.html',{'apt_view':apt_view, 'apt_ratings':apt_ratings})
 

@@ -1,125 +1,189 @@
 {% extends 'header.html' %}
 {% block body %}
-
+{% load static %}
+{% load mathfilters %}
+<head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	<!-- https://stackoverflow.com/questions/1987524/turn-a-number-into-star-rating-display-using-jquery-and-css -->
+$.fn.stars = function() {
+    return $(this).each(function() {
+        // Get the value
+        var val = parseFloat($(this).html());
+        // Make sure that the value is in 0 - 5 range, multiply to get width
+        var size = Math.max(0, (Math.min(5, val))) * 16;
+        // Create stars holder
+        var $span = $('<span />').width(size);
+        // Replace the numerical value with stars
+        $(this).html($span);
+    });
+}
+</script>
+<style>
+	span.stars, span.stars span {
+		display: block;
+		background: url({% static 'stars.png' %}) 0 -16px repeat-x;
+		width: 80px;
+		height: 16px;
+	}
 
-
+	span.stars span {
+		background-position: 0 0;
+	}
+</style>
+</head>
 <body>
-	<center>
-		<div class="apt_view">
-		{% csrf_token %}
-
-
-
-
-		<u>Location</u><br>
-		Adress: {{apt_view.address_line}}<br>
-		City: {{apt_view.city}}<br>
-		State: {{apt_view.state}}<br>
-		Zipcode: {{apt_view.zipcode}}<br>
-		{{apt_rate.move_in_date}}
-		<br>
-		<u>Layout</u>
-		<br>
-		Bedrooms: {{apt_view.bedrooms}}<br>
-		Bathrooms: {{apt_view.bathrooms}}<br>
-		{% if apt_view.living_room != False %}
-		Living room<br>
-		{% endif %}
-		{% if apt_view.basement != False %}
-		Basement<br>
-		{% endif %}
-		{% if apt_view.attic != False %}
-		Attic<br>
-		{% endif %}
-		{% if apt_view.secondary_storage != False %}
-		Secondary Storage<br>
-		{% endif %}
-		<br>
-		<u>Included Utilities</u>
-		<br>
-		{% if apt_view.water != False %}
-		Water<br>
-		{% endif %}
-		{% if apt_view.heat != False %}
-		Heat<br>
-		{% endif %}
-		{% if apt_view.electric != False %}
-		Electric<br>
-		{% endif %}
-		{% if apt_view.garbage != False %}
-		Garbage<br>
-		{% endif %}
-		{% if apt_view.washer != False %}
-		Washer<br>
-		{% endif %}
-		{% if apt_view.dryer != False %}
-		Dryer<br>
-		{% endif %}
-		
-		{% if apt_view.water == False %}
-			{% if apt_view.heat == False %}
-				{% if apt_view.electric == False %}
-					{% if apt_view.garbage == False %}
-						{% if apt_view.washer == False %}
-							{% if apt_view.dryer == False %}
-							<p>None</p>
+	<script>
+	$(function() {
+    $('span.stars').stars();
+	});
+	</script>
+	
+	{% csrf_token %}
+		<div class="container-fluid" >
+			<center>
+			<h1>Apartment Rating</h1>
+			<p>This is the most up to date information we have and the most recent 5 ratings.</p>
+			<p><h3>
+				<u>Location</u>
+				<br>
+				{{apt_view.address_line}}<br>
+				{{apt_view.city}}, {{apt_view.state}} {{apt_view.zipcode}}
+			</h3></p>
+			</center>
+			<br>
+			<div class="row">
+				<div class="col-sm-6">
+					<p>
+						<u>Layout</u>
+						<br>
+						Bedrooms: {{apt_view.bedrooms}}<br>
+						Bathrooms: {{apt_view.bathrooms}}<br>
+						{% if apt_view.living_room != False %}
+						Living room<br>
+						{% endif %}
+						{% if apt_view.basement != False %}
+						Basement<br>
+						{% endif %}
+						{% if apt_view.attic != False %}
+						Attic<br>
+						{% endif %}
+						{% if apt_view.secondary_storage != False %}
+						Secondary Storage<br>
+						{% endif %}
+						<br>
+						<u>Included Utilities</u>
+						<br>
+						{% if apt_view.water != False %}
+						Water<br>
+						{% endif %}
+						{% if apt_view.heat != False %}
+						Heat<br>
+						{% endif %}
+						{% if apt_view.electric != False %}
+						Electric<br>
+						{% endif %}
+						{% if apt_view.garbage != False %}
+						Garbage<br>
+						{% endif %}
+						{% if apt_view.washer != False %}
+						Washer<br>
+						{% endif %}
+						{% if apt_view.dryer != False %}
+						Dryer<br>
+						{% endif %}
+						
+						{% if apt_view.water == False %}
+							{% if apt_view.heat == False %}
+								{% if apt_view.electric == False %}
+									{% if apt_view.garbage == False %}
+										{% if apt_view.washer == False %}
+											{% if apt_view.dryer == False %}
+											None<br> <br>
+											{% endif %}
+										{% endif %}
+									{% endif %}
+								{% endif %}
 							{% endif %}
 						{% endif %}
-					{% endif %}
-				{% endif %}
-			{% endif %}
-		{% endif %}
 
-		<u>Pets</u>
-		<br>
-		{% if apt_view.pets != False %}
-		Allowed<br>
-		{% else %}
-		Not Allowed<br>
-		{% endif %}
-		<br>
-		<u>Parking</u>
-		<br>
-		{% if apt_view.parking_onstreet != False %}
-		On street<br>
-		{% endif %}
-		{% if apt_view.parking_offstreet != False %}
-		Off street<br>
-		{% endif %}
-		
-		{% if apt_view.parking_onstreet == False %}
-			{% if apt_view.parking_offstreet == False %}
-				<p>None</p>
-			{% endif %}
-		{% endif %}
+						<u>Pets</u>
+						<br>
+						{% if apt_view.pets != False %}
+						Allowed<br>
+						{% else %}
+						Not Allowed<br>
+						{% endif %}
+						<br>
+						<u>Parking</u>
+						<br>
+						{% if apt_view.parking_onstreet != False %}
+						On street<br>
+						{% endif %}
+						{% if apt_view.parking_offstreet != False %}
+						Off street<br>
+						{% endif %}
+						
+						{% if apt_view.parking_onstreet == False %}
+							{% if apt_view.parking_offstreet == False %}
+								<p>None</p>
+							{% endif %}
+						{% endif %}
 
-		<u>Public transportation</u>
-		<br>
-		{% if apt_view.public_transportation != False %}
-		Accessable<br>
-		{% else %}
-		Not accessable
-		{% endif %}
-		<br>
+						<u>Public transportation</u>
+						<br>
+						{% if apt_view.public_transportation != False %}
+						Accessable<br>
+						{% else %}
+						Not accessable
+						{% endif %}
+						<br>
 
-		<br>
-		<u>Landlord</u><br>
-		Fist name: {{apt_view.landlord_first_name}}<br>
-		Lanst name: {{apt_view.landlord_last_name}}<br>
-		Comapany: {{apt_view.landlord_company}}<br>
-		<a class="btn btn-default" href="/add_apartment_rating/{{apt_view.pk}}/">Rate Apartment</a><br>
-
-
-
+						<br>
+						<u>Landlord</u><br>
+						Fist name: {{apt_view.landlord_first_name}}<br>
+						Lanst name: {{apt_view.landlord_last_name}}<br>
+						Comapany: {{apt_view.landlord_company}}<br>
+						<a class="btn btn-default" href="/add_apartment_rating/{{apt_view.pk}}/">Rate Apartment</a>
+						<a class="btn btn-default" href="/edit_apartment/{{result.pk}}/">Edit Apartment</a>
+					</p>
+				</div>
+				<div class="col-sm-6">
+					
+						{% for rating in apt_ratings %}
+						<p>
+							<h4>Lived there {{rating.move_in_date}}</h4>
+							Years Occupied: {{rating.years_lived}}<br>
+							Starting Rent: ${{rating.starting_rent}}, Ending Rent: ${{rating.starting_rent}} <br>
+							Rent Increase: ${{rating.starting_rent |sub:rating.ending_rent }}<br>
+							Security Deposit: ${{rating.security_deposit}}<br>
+							Pet Fee: ${{rating.pet_fee}}<br>
+							<h4>Apartment Stats</h4>
+							Neighborhood: <span class="stars">{{rating.neighborhood}}</span>
+							Location: <span class="stars">{{rating.location}}</span>
+							Parking: <span class="stars">{{rating.parking}}</span>
+							Water: <span class="stars">{{rating.water}}</span>
+							Heat: <span class="stars">{{rating.heat}}</span>
+							Electric: <span class="stars">{{rating.electric}}</span>
+							Garbage: <span class="stars">{{rating.garbage}}</span>
+							
+							<h4>Landlord Stats</h4>
+							Hot: <span class="stars">{{rating.landlord_hot}}</span>
+							Privacy: <span class="stars">{{rating.landlord_privacy}}</span>
+							Responsiveness: <span class="stars">{{rating.landlord_responsiveness}}</span>
+							Maintenance: <span class="stars">{{rating.landlord_maintenance}}</span>
+							
+							Comment: <br>{{rating.comment}}<br>
+						</p>
+						{% endfor %}
+				</div>
+			</div>
 		</div>
-	</center>
 </body>
 
 {% endblock %}

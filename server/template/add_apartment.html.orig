@@ -26,18 +26,23 @@
     <body>
        <center><h1><font size="22" color = "#FFA500" > Add Apartment</font></h1></center>
         <div class="container-fluid">
+<<<<<<< HEAD
 			{% if request.user.is_authenticated %}
 					<center><button type="button" class="btn btn-info btn-lg" id="addressbtn" data-toggle="modal" data-target="#myModal">Address Info</button></center>
 			{% else %}
 				<center><h3>Please log in to add apartment</h3></center>
 			{% endif %}
+=======
+        <center><button type="button" class="btn btn-info btn-lg" id="addressbtn" data-toggle="modal" data-target="#myModal">Add Apartment Info</button></center>
+>>>>>>> origin/touch_up_looks
         <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Address Info</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Address Info</h4>
+
             </div>
         <div class="modal-body">
         <form id="apartment_form" method="POST"/> 
@@ -203,7 +208,7 @@
                       <img src='{% static "img/BedRate.jpg" %}' class='img-responsive' alt="My image" width="900" height="1400"/>
                     <div class="carousel-caption">
                       <h3>Anonymous:</h3>
-                      <p>"Loved this room!"</p>
+                      <p>""</p>
                     </div>
                   </div>
 
@@ -211,7 +216,7 @@
                       <img src='{% static "img/kitchRate.jpg" %}' class='img-responsive' alt="My image" width="900" height="1400"/>
                     <div class="carousel-caption">
                       <h3>Anonymous:</h3>
-                      <p>"Great counters, loved the modern feel."</p>
+                      <p>""</p>
                     </div>
                   </div>
 
@@ -219,7 +224,7 @@
                       <img src='{% static "img/bathRate.jpg" %}' class='img-responsive' alt="My image" width="900" height="1400"/>
                     <div class="carousel-caption">
                       <h3>Anonymous:</h3>
-                      <p>"Water pressure could of been better."</p>
+                      <p>""</p>
                     </div>
                   </div>
                 </div>

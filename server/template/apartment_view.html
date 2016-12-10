@@ -163,7 +163,7 @@ $.fn.stars = function() {
 					{% if apt_ratings %}
 						<h3>Average Rating</h3>
 						<p>
-							Years Occupied: {{aggr.years_lived__avg}}<br>
+							Years Occupied: {{aggr.years_lived__avg|floatformat:2}}<br>
 							Starting Rent: ${{aggr.starting_rent__avg|floatformat:2}}, Ending Rent: ${{aggr.ending_rent__avg|floatformat:2}} <br>
 							Rent Increase: ${{aggr.starting_rent__avg|floatformat:2 |sub:aggr.ending_rent__avg|floatformat:2 }}<br>
 							Security Deposit: ${{aggr.security_deposit__avg|floatformat:2}}<br>

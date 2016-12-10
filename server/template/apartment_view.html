@@ -48,7 +48,7 @@ $.fn.stars = function() {
 		<div class="container-fluid" >
 			<center>
 			<h1>Apartment Rating</h1>
-			<p>This is the most up to date information we have and the most recent 5 ratings.</p>
+			<p>This is the most up to date information we have on this apartment, the average ratings then the 5 most recent ratings.</p>
 			<p><h3>
 				<u>Location</u>
 				<br>
@@ -59,6 +59,7 @@ $.fn.stars = function() {
 			<br>
 			<div class="row">
 				<div class="col-sm-6">
+					<h3>Apartment Information</h3>
 					<p>
 						<u>Layout</u>
 						<br>
@@ -149,13 +150,48 @@ $.fn.stars = function() {
 						Fist name: {{apt_view.landlord_first_name}}<br>
 						Lanst name: {{apt_view.landlord_last_name}}<br>
 						Comapany: {{apt_view.landlord_company}}<br>
+						{% if request.user.is_authenticated %}
 						<a class="btn btn-default" href="/add_apartment_rating/{{apt_view.pk}}/">Rate Apartment</a>
-						<a class="btn btn-default" href="/edit_apartment/{{result.pk}}/">Edit Apartment</a>
+						<a class="btn btn-default" href="/edit_apartment/{{apt_view.pk}}/">Edit Apartment</a>
+						{% else %}
+						<br> <br>
+						<h3>Please log in to edit or rate apartment</h3>
+						{% endif %}
 					</p>
 				</div>
 				<div class="col-sm-6">
-					
-						{% for rating in apt_ratings %}
+					{% if apt_ratings %}
+						<h3>Average Rating</h3>
+						<p>
+							Years Occupied: {{aggr.years_lived__avg}}<br>
+							Starting Rent: ${{aggr.starting_rent__avg|floatformat:2}}, Ending Rent: ${{aggr.ending_rent__avg|floatformat:2}} <br>
+							Rent Increase: ${{aggr.starting_rent__avg|floatformat:2 |sub:aggr.ending_rent__avg|floatformat:2 }}<br>
+							Security Deposit: ${{aggr.security_deposit__avg|floatformat:2}}<br>
+							Pet Fee: ${{aggr.pet_fee__avg|floatformat:2}}<br>
+							<h4>Apartment Stats</h4>
+							Neighborhood: <span class="stars">{{aggr.neighborhood__avg}}</span>
+							Location: <span class="stars">{{aggr.location__avg}}</span>
+							Parking: <span class="stars">{{aggr.parking__avg}}</span>
+							Water: <span class="stars">{{aggr.water__avg}}</span>
+							Heat: <span class="stars">{{aggr.heat__avg}}</span>
+							Electric: <span class="stars">{{aggr.electric__avg}}</span>
+							Garbage: <span class="stars">{{aggr.garbage__avg}}</span>
+							
+							<h4>Landlord Stats</h4>
+							Hot: <span class="stars">{{aggr.landlord_hot__avg}}</span>
+							Privacy: <span class="stars">{{aggr.landlord_privacy__avg}}</span>
+							Responsiveness: <span class="stars">{{aggr.landlord_responsiveness__avg}}</span>
+							Maintenance: <span class="stars">{{aggr.landlord_maintenance__avg}}</span>
+						</p>
+					{% else %}
+						<h3>No Ratings added yet</h3>
+					{% endif %}
+				</div>
+			</div>
+			<div class="row">
+				{% if apt_ratings %}
+					<h3>Five Most Recent Ratings</h3>
+					{% for rating in apt_ratings %}
 						<p>
 							<h4>Lived there {{rating.move_in_date}}</h4>
 							Years Occupied: {{rating.years_lived}}<br>
@@ -181,7 +217,7 @@ $.fn.stars = function() {
 							Comment: <br>{{rating.comment}}<br>
 						</p>
 						{% endfor %}
-				</div>
+					{% endif %}
 			</div>
 		</div>
 </body>

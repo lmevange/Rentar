@@ -4,6 +4,11 @@
 
 <body>
 {% if results %}
+	{% if not request.user.is_authenticated %}
+		<br>
+		<h3>Please log in to edit or rate apartment</h3>
+	{% endif %}
+
   {% for result in results %}
     {{ result.address_line }}<br>
     {{ result.city }}
@@ -13,8 +18,11 @@
     <p>Landlord: {{ result.landlord_last_name}} </p>
     <br>
     <a class="btn btn-default" href="/apartment_view/{{result.pk}}/">View Apartment</a>
-    <a class="btn btn-default" href="/edit_apartment/{{result.pk}}/">Edit Apartment</a>
-    <a class="btn btn-default" href="/add_apartment_rating/{{result.pk}}/">Rate Apartment</a><br><br>
+    {% if request.user.is_authenticated %}
+		<a class="btn btn-default" href="/edit_apartment/{{result.pk}}/">Edit Apartment</a>
+		<a class="btn btn-default" href="/add_apartment_rating/{{result.pk}}/">Rate Apartment</a>			
+	{% endif %}
+		<br><br>
   {% endfor %}
 {% else %}
     <h3 class='error'>Could not find apartment. Try again or add new apartment</h3>

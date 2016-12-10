@@ -4,7 +4,7 @@ from django.template import RequestContext
 from django.forms import ModelForm, HiddenInput
 from rentar.forms import ApartmentForm, ApartmentRatingForm
 from rentar.models import Apartment, Apartment_Rating
-from django.db.models import Q
+from django.db.models import Q, Avg, Max, Min
 import operator
 from functools import reduce
 from django.contrib.auth import (
@@ -29,9 +29,12 @@ def login(request):
 def apartment_view(request,pk):
 
 	apt_view = get_object_or_404(Apartment,pk=pk)
-	apt_ratings = Apartment_Rating.objects.select_related('apartment').filter(apartment=apt_view.pk).order_by('-move_in_date')[:5]
-        #apt_rate = Apartment_Rating.objects.get(apartment__pk = pk)
-	return render(request, 'apartment_view.html',{'apt_view':apt_view, 'apt_ratings':apt_ratings})
+	apt_ratings = Apartment_Rating.objects.select_related('apartment').filter(apartment=apt_view.pk)
+	aggr = apt_ratings.aggregate(Avg('water'), Avg('heat'), Avg('electric'), Avg('garbage'), Avg('parking'), Avg('neighborhood'), 
+				Avg('location'), Avg('landlord_hot'), Avg('landlord_privacy'), Avg('landlord_responsiveness'), Avg('landlord_maintenance'),
+				Avg('starting_rent'),Avg('ending_rent'),Avg('security_deposit'),Avg('pet_fee'))
+	apt_ratings = apt_ratings.order_by('-move_in_date')[:5]
+	return render(request, 'apartment_view.html',{'aggr':aggr, 'apt_view':apt_view, 'apt_ratings':apt_ratings})
 
 def contact(request):
 	return render(request, 'contact.html')

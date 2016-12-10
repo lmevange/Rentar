@@ -26,7 +26,11 @@
     <body>
        <center><h1>Edit Apartment</h1></center>
         <div class="container-fluid">
+			{% if request.user.is_authenticated %}
         <center><button type="button" class="btn btn-info btn-lg" id="addressbtn" data-toggle="modal" data-target="#myModal">Edit Address Info</button></center>
+			{% else %}
+				<center><h3>Please log in to edit apartment</h3></center>
+			{% endif %}
         <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->

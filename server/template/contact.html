@@ -1,5 +1,6 @@
 {% extends 'header.html' %}
 {% block body %}
+{% load static %}
 	<div class="container">
 		<div class="mission-statement">
 			<center>
@@ -16,4 +17,23 @@
 			<center><strong>Email us at: <a href="mailto:RentarRaptor@gmail.com?" target="_top">RentarRaptor@gmail.com</a> </center>
 		</div>
 	</div>
+
+
+<div class="row">
+  <div class="col-md-4">
+        <img src='{% static "img/office_image.jpg" %}' class='img-responsive' alt="My image"/>
+        <div class="caption">
+    </div>
+  </div>
+  <div class="col-md-4">
+        <img src='{% static "img/livingroom_image.jpg" %}' class='img-responsive' alt="My image"/>
+        <div class="caption">
+        </div>
+  </div>
+  <div class="col-md-4">
+        <img src='{% static "img/bathroom_image.jpg" %}' class='img-responsive' alt="My image"/>
+        <div class="caption">
+        </div>
+  </div>
+</div>
 {% endblock %}

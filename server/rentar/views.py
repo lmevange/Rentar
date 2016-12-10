@@ -30,7 +30,7 @@ def apartment_view(request,pk):
 
 	apt_view = get_object_or_404(Apartment,pk=pk)
 	apt_ratings = Apartment_Rating.objects.select_related('apartment').filter(apartment=apt_view.pk)
-	aggr = apt_ratings.aggregate(Avg('water'), Avg('heat'), Avg('electric'), Avg('garbage'), Avg('parking'), Avg('neighborhood'), 
+	aggr = apt_ratings.aggregate(Avg('years_lived'), Avg('water'), Avg('heat'), Avg('electric'), Avg('garbage'), Avg('parking'), Avg('neighborhood'), 
 				Avg('location'), Avg('landlord_hot'), Avg('landlord_privacy'), Avg('landlord_responsiveness'), Avg('landlord_maintenance'),
 				Avg('starting_rent'),Avg('ending_rent'),Avg('security_deposit'),Avg('pet_fee'))
 	apt_ratings = apt_ratings.order_by('-move_in_date')[:5]

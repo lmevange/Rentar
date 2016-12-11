@@ -165,7 +165,7 @@ $.fn.stars = function() {
 						<p>
 							Years Occupied: {{aggr.years_lived__avg|floatformat:2}}<br>
 							Starting Rent: ${{aggr.starting_rent__avg|floatformat:2}}, Ending Rent: ${{aggr.ending_rent__avg|floatformat:2}} <br>
-							Rent Increase: ${{aggr.starting_rent__avg|floatformat:2 |sub:aggr.ending_rent__avg|floatformat:2 }}<br>
+							Rent Increase: ${{aggr.ending_rent__avg|floatformat:2 |sub:aggr.starting_rent__avg|floatformat:2 }}<br>
 							Security Deposit: ${{aggr.security_deposit__avg|floatformat:2}}<br>
 							Pet Fee: ${{aggr.pet_fee__avg|floatformat:2}}<br>
 							<h4>Apartment Stats</h4>
@@ -196,7 +196,7 @@ $.fn.stars = function() {
 							<h4>Lived there {{rating.move_in_date}}</h4>
 							Years Occupied: {{rating.years_lived}}<br>
 							Starting Rent: ${{rating.starting_rent}}, Ending Rent: ${{rating.ending_rent}} <br>
-							Rent Increase: ${{rating.starting_rent |sub:rating.ending_rent }}<br>
+							Rent Increase: ${{rating.ending_rent |sub:starting.ending_rent }}<br>
 							Security Deposit: ${{rating.security_deposit}}<br>
 							Pet Fee: ${{rating.pet_fee}}<br>
 							<h4>Apartment Stats</h4>

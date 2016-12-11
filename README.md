@@ -1,11 +1,10 @@
 # Rentar
 
 Rent Rater website
-The idea of this project is to create a reliable source of information for renters to learn about the history of their prospective apartment or landlord. Landlords tend to have the upperhand so this is suppsoed to be a tool that renters can use to help even the playing field.
+The idea of this project is to create a reliable source of information for renters to learn about the history of their prospective apartment and landlord. Landlords tend to have the upperhand so this is suppsoed to be a tool that renters can use to help even the playing field.
 
-Look up history of apartments
-Look up history of landlord
-Rating system.
+Look up history of apartments and Landords and how users of the site rate the apartments and landlords
+
 
 To acsess our website go to http://www.rentarater.com/
 
@@ -24,7 +23,7 @@ After clicking that you will be brought to a page and will click on the Adress i
 
 Upon clicking a popup will apear and you can fillout the information for the aparemnt you wish to rate
 
-You can contact us at the Contact Us button
+You can contact us at the About Us button
 
 
 ![alt tag](https://github.com/lmevange/Rentar/blob/readmepics/assets/Images/Screen%20Shot%202016-12-10%20at%202.18.11%20PM.png)
@@ -44,11 +43,11 @@ You can contact us at the Contact Us button
 
     password. Make user. Add user to sudo group. Log in as new user. Make home directory rwx.
 
-  * On that droplet update and upgrade, make sure python3 and git is installed.
+  * On that droplet update and upgrade, make sure python3 and git is installed with apt-get python3 and apt-get pip.
 
   * Do all install commands with sudo.
 
-  * Install pip3 with package ‘python3-pip3’ update pip3 with ‘pip3 install –upgrade pip’
+  * Install pip3 with package ‘apt-get python3-pip3’ update pip3 with ‘pip3 install –upgrade pip’
 
   * Install Django and crispy forms packages ‘pip3 install django’ ‘pip3 install django-crispy- forms’
 
@@ -61,9 +60,3 @@ You can contact us at the Contact Us button
     runserver 0.0.0.0:8000’ to run on remote IP.
 
   * Add ip address and or hostname of server in server/settings.py under allowed_hosts[]
-
-  https://www.digitalocean.com/community/tutorials/how-to- set-up- a-host- name-with- digitalocean
-
-  https://www.digitalocean.com/community/questions/how-do- i-point- my-custom- domain-to- my-ip-
-
-  port-41- 111-20- 36-8080

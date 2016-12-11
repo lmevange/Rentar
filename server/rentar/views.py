@@ -120,7 +120,7 @@ def add_apartment(request):
 
 def add_apartment_rating(request, pk):
 #	context = RequestContext(request)
-
+	apt_view = get_object_or_404(Apartment,pk=pk)
 	if request.method == 'POST':
 		form = ApartmentRatingForm(request.POST)
 
@@ -128,14 +128,14 @@ def add_apartment_rating(request, pk):
 			rating = form.save(commit = False)
 			rating.apartment=Apartment.objects.get(id=pk) 
 			rating.save()
-			apt_view = get_object_or_404(Apartment,pk=pk)
+			
 			return redirect('apartment_view', apt_view.pk)
 		else:
 			print (form.errors)
 	else:
 		form = ApartmentRatingForm()
 
-	return render(request,'add_apartment_rating.html', {'form':form}) #change name of html after merging maybe
+	return render(request,'add_apartment_rating.html', {'form':form, 'apt_view':apt_view}) #change name of html after merging maybe
 
 def edit_apartment(request, pk):
 	apartment = get_object_or_404(Apartment, pk=pk)

@@ -1,5 +1,39 @@
 {% extends 'header.html' %}
 {% block body %}
-    <center> <i>User feedback is useful to us! Let us know about features that may be useful or bugs that need squashing!</i> </center>
-    <center><strong>Email us at: <a href="mailto:RentarRaptor@gmail.com?" target="_top">RentarRaptor@gmail.com</a> </center>
+{% load static %}
+	<div class="container">
+		<div class="mission-statement">
+			<center>
+			<h1>
+			<font size="22" color = "#FFA500" > Rentar is for apartment renters</font>
+			</h1>
+			<p>
+				This site is used to find out information about an apartment that you are considering to rent.
+			</p>
+			</center>
+			<br>
+			<br>
+			<center> <i>User feedback is useful to us! Let us know about features that may be useful or bugs that need squashing!</i> </center>
+			<center><strong>Email us at: <a href="mailto:RentarRaptor@gmail.com?" target="_top">RentarRaptor@gmail.com</a> </center>
+		</div>
+	</div>
+
+
+<div class="row">
+  <div class="col-md-4">
+        <img src='{% static "img/office_image.jpg" %}' class='img-responsive' alt="My image"/>
+        <div class="caption">
+    </div>
+  </div>
+  <div class="col-md-4">
+        <img src='{% static "img/livingroom_image.jpg" %}' class='img-responsive' alt="My image"/>
+        <div class="caption">
+        </div>
+  </div>
+  <div class="col-md-4">
+        <img src='{% static "img/bathroom_image.jpg" %}' class='img-responsive' alt="My image"/>
+        <div class="caption">
+        </div>
+  </div>
+</div>
 {% endblock %}

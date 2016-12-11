@@ -1,0 +1,527 @@
+[07/Dec/2016 00:44:17] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:44:17] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:44:18] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 00:45:04] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:45:04] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 00:45:20] "GET /add_apartment/ HTTP/1.0" 200 10658
+Not Found: /add_apartment/assets/css/styles.css
+[07/Dec/2016 00:45:20] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+[07/Dec/2016 00:55:01] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:02] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:02] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 00:55:09] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:10] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:10] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 00:55:18] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:18] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:18] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 00:55:23] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:23] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:23] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 00:55:25] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:25] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:25] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 00:55:34] "GET /login/ HTTP/1.0" 200 4059
+Not Found: /login/assets/css/styles.css
+[07/Dec/2016 00:55:35] "GET /login/assets/css/styles.css HTTP/1.0" 404 4732
+Not Found: /login/assets/css/styles.css
+[07/Dec/2016 00:55:35] "GET /login/assets/css/styles.css HTTP/1.0" 404 4732
+[07/Dec/2016 00:55:38] "GET /contact/ HTTP/1.0" 200 3526
+Not Found: /contact/assets/css/styles.css
+[07/Dec/2016 00:55:38] "GET /contact/assets/css/styles.css HTTP/1.0" 404 4738
+Not Found: /contact/assets/css/styles.css
+[07/Dec/2016 00:55:39] "GET /contact/assets/css/styles.css HTTP/1.0" 404 4738
+[07/Dec/2016 00:55:41] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:41] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:41] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 00:55:42] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:42] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /assets/css/styles.css
+[07/Dec/2016 00:55:42] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 00:55:43] "GET /add_apartment/ HTTP/1.0" 200 10658
+Not Found: /add_apartment/assets/css/styles.css
+[07/Dec/2016 00:55:43] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+Not Found: /add_apartment/assets/css/styles.css
+[07/Dec/2016 00:55:44] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+[07/Dec/2016 00:55:45] "GET /contact/ HTTP/1.0" 200 3526
+Not Found: /contact/assets/css/styles.css
+[07/Dec/2016 00:55:45] "GET /contact/assets/css/styles.css HTTP/1.0" 404 4738
+Not Found: /contact/assets/css/styles.css
+[07/Dec/2016 00:55:45] "GET /contact/assets/css/styles.css HTTP/1.0" 404 4738
+[07/Dec/2016 00:55:47] "GET /add_apartment/ HTTP/1.0" 200 10658
+Not Found: /add_apartment/assets/css/styles.css
+[07/Dec/2016 00:55:47] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+Not Found: /add_apartment/assets/css/styles.css
+[07/Dec/2016 00:55:47] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[07/Dec/2016 01:16:40] "GET / HTTP/1.0" 400 59941
+Invalid HTTP_HOST header: 'www.baidu.com'. You may need to add 'www.baidu.com' to ALLOWED_HOSTS.
+[07/Dec/2016 02:21:07] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 400 59952
+[07/Dec/2016 04:32:30] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 04:32:30] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 04:32:32] "GET /static/img/fakelogo.png HTTP/1.0" 200 135828
+[07/Dec/2016 04:32:33] "GET /static/img/homepagepic.jpg HTTP/1.0" 200 251969
+[07/Dec/2016 04:32:35] "GET /static/img/homepagepic.jpg HTTP/1.0" 200 251969
+[07/Dec/2016 04:32:35] "GET /static/img/fakelogo.png HTTP/1.0" 200 135828
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[07/Dec/2016 05:03:23] "GET / HTTP/1.0" 400 59742
+Invalid HTTP_HOST header: 'testp4.pospr.waw.pl'. You may need to add 'testp4.pospr.waw.pl' to ALLOWED_HOSTS.
+[07/Dec/2016 05:05:54] "GET /testproxy.php HTTP/1.0" 400 60759
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[07/Dec/2016 05:13:26] "GET / HTTP/1.0" 400 59742
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[07/Dec/2016 08:44:50] "GET / HTTP/1.0" 400 59937
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[07/Dec/2016 10:06:28] "GET / HTTP/1.0" 400 59742
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[07/Dec/2016 10:16:01] "GET / HTTP/1.0" 400 60102
+[07/Dec/2016 11:33:44] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[07/Dec/2016 11:33:46] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[07/Dec/2016 11:33:46] "GET /static/img/fakelogo.png HTTP/1.0" 200 135828
+[07/Dec/2016 11:33:46] "GET /static/img/homepagepic.jpg HTTP/1.0" 200 251969
+Not Found: /assets/css/styles.css
+[07/Dec/2016 11:33:46] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Invalid HTTP_HOST header: '045.055.236.043'. You may need to add '045.055.236.043' to ALLOWED_HOSTS.
+[07/Dec/2016 12:18:01] "GET / HTTP/1.0" 400 60077
+Invalid HTTP_HOST header: '180.163.113.82'. You may need to add '180.163.113.82' to ALLOWED_HOSTS.
+[07/Dec/2016 13:40:00] "HEAD /check_proxy HTTP/1.0" 400 60011
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[07/Dec/2016 15:23:52] "GET /xmlrpc.php HTTP/1.0" 400 60167
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[07/Dec/2016 15:44:57] "GET /php.php HTTP/1.0" 400 60045
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[07/Dec/2016 15:45:26] "GET /info.php HTTP/1.0" 400 60056
+[07/Dec/2016 15:45:26] "GET /phpinfo.php HTTP/1.0" 400 60089
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[07/Dec/2016 16:38:23] "GET / HTTP/1.0" 400 59939
+Not Found: /robots.txt
+[07/Dec/2016 17:08:38] "GET /robots.txt HTTP/1.0" 404 4681
+[07/Dec/2016 17:08:38] "GET / HTTP/1.0" 200 5614
+Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+[07/Dec/2016 17:28:12] "GET /testproxy.php HTTP/1.0" 400 60759
+Invalid HTTP_HOST header: '37.45.236.35'. You may need to add '37.45.236.35' to ALLOWED_HOSTS.
+[07/Dec/2016 17:29:55] "GET / HTTP/1.0" 400 60342
+Not Found: /m/
+[07/Dec/2016 17:44:28] "GET /m/ HTTP/1.0" 404 4657
+Not Found: /mobile/
+[07/Dec/2016 18:15:18] "GET /mobile/ HTTP/1.0" 404 4672
+Invalid HTTP_HOST header: 'www.baidu.com'. You may need to add 'www.baidu.com' to ALLOWED_HOSTS.
+[07/Dec/2016 19:03:24] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 400 59952
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[07/Dec/2016 19:38:28] "GET / HTTP/1.0" 400 60050
+[08/Dec/2016 02:36:46] "GET /add_apartment/ HTTP/1.0" 200 10658
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[08/Dec/2016 06:37:31] "GET / HTTP/1.0" 400 59742
+Invalid HTTP_HOST header: 'testp4.pospr.waw.pl'. You may need to add 'testp4.pospr.waw.pl' to ALLOWED_HOSTS.
+[08/Dec/2016 08:06:38] "GET /testproxy.php HTTP/1.0" 400 60759
+Not Found: /robots.txt
+[08/Dec/2016 09:43:33] "GET /robots.txt HTTP/1.0" 404 4681
+[08/Dec/2016 09:43:33] "GET / HTTP/1.0" 200 5614
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[08/Dec/2016 10:19:36] "GET / HTTP/1.0" 400 59742
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[08/Dec/2016 10:33:53] "GET / HTTP/1.0" 400 59939
+[08/Dec/2016 12:07:43] "GET / HTTP/1.0" 200 5614
+Not Found: /Contact.
+[08/Dec/2016 12:07:44] "GET /Contact. HTTP/1.0" 404 4675
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[08/Dec/2016 16:11:57] "GET /xmlrpc.php HTTP/1.0" 400 60167
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[08/Dec/2016 17:41:31] "GET /manager/html HTTP/1.0" 400 60648
+[08/Dec/2016 17:47:40] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[08/Dec/2016 17:47:40] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[08/Dec/2016 17:47:40] "GET /static/img/fakelogo.png HTTP/1.0" 200 135828
+[08/Dec/2016 17:47:40] "GET /static/img/homepagepic.jpg HTTP/1.0" 200 251969
+Not Found: /assets/css/styles.css
+[08/Dec/2016 17:47:41] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /favicon.ico
+[08/Dec/2016 17:47:41] "GET /favicon.ico HTTP/1.0" 404 4684
+[08/Dec/2016 17:48:06] "GET /search/?q=Buffalo HTTP/1.0" 200 4385
+Not Found: /search/assets/css/styles.css
+[08/Dec/2016 17:48:06] "GET /search/assets/css/styles.css HTTP/1.0" 404 4735
+Not Found: /search/assets/css/styles.css
+[08/Dec/2016 17:48:07] "GET /search/assets/css/styles.css HTTP/1.0" 404 4735
+[08/Dec/2016 17:48:11] "GET /edit_apartment/1/ HTTP/1.0" 200 10793
+Not Found: /edit_apartment/1/assets/css/styles.css
+[08/Dec/2016 17:48:11] "GET /edit_apartment/1/assets/css/styles.css HTTP/1.0" 404 4765
+Not Found: /edit_apartment/1/assets/css/styles.css
+[08/Dec/2016 17:48:11] "GET /edit_apartment/1/assets/css/styles.css HTTP/1.0" 404 4765
+[08/Dec/2016 17:50:43] "POST /edit_apartment/1/ HTTP/1.0" 200 4298
+Not Found: /edit_apartment/1/assets/css/styles.css
+[08/Dec/2016 17:50:44] "GET /edit_apartment/1/assets/css/styles.css HTTP/1.0" 404 4765
+Not Found: /edit_apartment/1/assets/css/styles.css
+[08/Dec/2016 17:50:44] "GET /edit_apartment/1/assets/css/styles.css HTTP/1.0" 404 4765
+[08/Dec/2016 17:50:51] "GET /add_apartment_rating/1/ HTTP/1.0" 200 11998
+Not Found: /add_apartment_rating/1/assets/css/styles.css
+[08/Dec/2016 17:50:51] "GET /add_apartment_rating/1/assets/css/styles.css HTTP/1.0" 404 4783
+Not Found: /add_apartment_rating/1/assets/css/styles.css
+[08/Dec/2016 17:50:51] "GET /add_apartment_rating/1/assets/css/styles.css HTTP/1.0" 404 4783
+[08/Dec/2016 17:52:07] "POST /add_apartment_rating/1/ HTTP/1.0" 200 4298
+Not Found: /add_apartment_rating/1/assets/css/styles.css
+[08/Dec/2016 17:52:07] "GET /add_apartment_rating/1/assets/css/styles.css HTTP/1.0" 404 4783
+Not Found: /add_apartment_rating/1/assets/css/styles.css
+[08/Dec/2016 17:52:08] "GET /add_apartment_rating/1/assets/css/styles.css HTTP/1.0" 404 4783
+[08/Dec/2016 18:18:53] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[08/Dec/2016 18:18:53] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[08/Dec/2016 18:18:53] "GET /static/img/fakelogo.png HTTP/1.0" 304 0
+[08/Dec/2016 18:18:54] "GET /static/img/homepagepic.jpg HTTP/1.0" 304 0
+Not Found: /assets/css/styles.css
+[08/Dec/2016 18:18:54] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /favicon.ico
+[08/Dec/2016 18:18:55] "GET /favicon.ico HTTP/1.0" 404 4684
+[08/Dec/2016 18:19:12] "GET /add_apartment/ HTTP/1.0" 200 10658
+Not Found: /add_apartment/assets/css/styles.css
+[08/Dec/2016 18:19:12] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+Not Found: /add_apartment/assets/css/styles.css
+[08/Dec/2016 18:19:13] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+[08/Dec/2016 18:19:16] "GET / HTTP/1.0" 200 5614
+Not Found: /assets/css/styles.css
+[08/Dec/2016 18:19:16] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /assets/css/styles.css
+[08/Dec/2016 18:19:17] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+[08/Dec/2016 18:19:25] "GET /add_apartment/ HTTP/1.0" 200 10658
+Not Found: /add_apartment/assets/css/styles.css
+[08/Dec/2016 18:19:25] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+Not Found: /add_apartment/assets/css/styles.css
+[08/Dec/2016 18:19:25] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+[08/Dec/2016 18:19:42] "GET /login/ HTTP/1.0" 200 4059
+Not Found: /login/assets/css/styles.css
+[08/Dec/2016 18:19:42] "GET /login/assets/css/styles.css HTTP/1.0" 404 4732
+Not Found: /login/assets/css/styles.css
+[08/Dec/2016 18:19:43] "GET /login/assets/css/styles.css HTTP/1.0" 404 4732
+[08/Dec/2016 18:19:55] "POST /login/ HTTP/1.0" 200 4170
+Not Found: /login/assets/css/styles.css
+[08/Dec/2016 18:19:55] "GET /login/assets/css/styles.css HTTP/1.0" 404 4732
+Not Found: /login/assets/css/styles.css
+[08/Dec/2016 18:19:55] "GET /login/assets/css/styles.css HTTP/1.0" 404 4732
+[08/Dec/2016 18:19:58] "GET /register/ HTTP/1.0" 200 4774
+Not Found: /register/assets/css/styles.css
+[08/Dec/2016 18:19:58] "GET /register/assets/css/styles.css HTTP/1.0" 404 4741
+Not Found: /register/assets/css/styles.css
+[08/Dec/2016 18:19:58] "GET /register/assets/css/styles.css HTTP/1.0" 404 4741
+[08/Dec/2016 18:20:17] "POST /register/ HTTP/1.0" 302 0
+[08/Dec/2016 18:20:17] "GET / HTTP/1.0" 200 5856
+Not Found: /assets/css/styles.css
+[08/Dec/2016 18:20:17] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Not Found: /assets/css/styles.css
+[08/Dec/2016 18:20:18] "GET /assets/css/styles.css HTTP/1.0" 404 4714
+Invalid HTTP_HOST header: 'rentarater.com'. You may need to add 'rentarater.com' to ALLOWED_HOSTS.
+[08/Dec/2016 18:20:22] "GET / HTTP/1.0" 400 59742
+[08/Dec/2016 18:20:24] "GET /edit_profile/ HTTP/1.0" 200 4580
+Not Found: /edit_profile/assets/css/styles.css
+[08/Dec/2016 18:20:24] "GET /edit_profile/assets/css/styles.css HTTP/1.0" 404 4753
+Not Found: /edit_profile/assets/css/styles.css
+[08/Dec/2016 18:20:25] "GET /edit_profile/assets/css/styles.css HTTP/1.0" 404 4753
+[08/Dec/2016 18:20:33] "GET /add_apartment/ HTTP/1.0" 200 10900
+Not Found: /add_apartment/assets/css/styles.css
+[08/Dec/2016 18:20:33] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+Not Found: /add_apartment/assets/css/styles.css
+[08/Dec/2016 18:20:33] "GET /add_apartment/assets/css/styles.css HTTP/1.0" 404 4756
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7f4604a199d8>
+Traceback (most recent call last):
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'mathfilters'
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7f9acb45c9d8>
+Traceback (most recent call last):
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'mathfilters'
+[08/Dec/2016 19:12:38] "GET / HTTP/1.0" 200 5577
+[08/Dec/2016 19:12:40] "GET /add_apartment/ HTTP/1.0" 200 10624
+Invalid HTTP_HOST header: 'www.rentarater.com'. You may need to add 'www.rentarater.com' to ALLOWED_HOSTS.
+[08/Dec/2016 19:16:45] "GET /add_apartment/ HTTP/1.0" 400 61674
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 08, 2016 - 19:16:42
+Django version 1.10.4, using settings 'server.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[08/Dec/2016 19:17:25] "GET /add_apartment/ HTTP/1.0" 200 10624
+[08/Dec/2016 19:17:28] "GET /add_apartment/ HTTP/1.0" 200 10624
+[08/Dec/2016 19:17:37] "GET /search/?q=16 HTTP/1.0" 200 3294
+[08/Dec/2016 19:17:47] "GET /search/?q=ithica HTTP/1.0" 200 3294
+[08/Dec/2016 19:17:50] "GET /search/?q=buffalo HTTP/1.0" 200 4348
+[08/Dec/2016 19:17:57] "GET /contact/ HTTP/1.0" 200 3489
+[08/Dec/2016 19:19:58] "GET /add_apartment/ HTTP/1.0" 200 10624
+[08/Dec/2016 19:20:17] "POST /add_apartment/ HTTP/1.0" 302 0
+[08/Dec/2016 19:20:17] "GET /add_apartment_rating/6/ HTTP/1.0" 200 12056
+[08/Dec/2016 19:20:22] "GET /contact/ HTTP/1.0" 200 3489
+Invalid HTTP_HOST header: '45.55.236.43:8000'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[08/Dec/2016 19:31:50] "GET /manager/html HTTP/1.1" 400 59872
+Invalid HTTP_HOST header: 'testp1.piwo.pila.pl'. You may need to add 'testp1.piwo.pila.pl' to ALLOWED_HOSTS.
+[08/Dec/2016 20:37:02] "GET /testproxy.php HTTP/1.0" 400 60790
+[08/Dec/2016 22:01:08] "GET / HTTP/1.0" 200 5577
+[08/Dec/2016 22:01:09] "GET /static/img/fakelogo.png HTTP/1.0" 200 135828
+[08/Dec/2016 22:01:09] "GET /static/img/homepagepic.jpg HTTP/1.0" 200 251969
+Not Found: /favicon.ico
+[08/Dec/2016 22:01:09] "GET /favicon.ico HTTP/1.0" 404 4684
+Not Found: /favicon.ico
+[08/Dec/2016 22:01:09] "GET /favicon.ico HTTP/1.0" 404 4684
+[08/Dec/2016 22:01:19] "GET / HTTP/1.0" 200 5577
+[08/Dec/2016 22:01:24] "GET /add_apartment/ HTTP/1.0" 200 10624
+[08/Dec/2016 22:01:33] "GET /contact/ HTTP/1.0" 200 3489
+[08/Dec/2016 22:01:36] "GET /add_apartment/ HTTP/1.0" 200 10624
+[08/Dec/2016 22:01:55] "GET /search/?q=89+minnesota+ave HTTP/1.0" 200 3325
+[08/Dec/2016 22:02:09] "GET /apartment_view/6/ HTTP/1.0" 200 5628
+[08/Dec/2016 22:02:19] "GET /add_apartment_rating/6/ HTTP/1.0" 200 12056
+[08/Dec/2016 22:06:59] "GET / HTTP/1.0" 200 5577
+[08/Dec/2016 22:07:01] "GET / HTTP/1.0" 200 5577
+Invalid HTTP_HOST header: 'www.baidu.com'. You may need to add 'www.baidu.com' to ALLOWED_HOSTS.
+[08/Dec/2016 23:26:29] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 400 59982
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[08/Dec/2016 23:44:29] "GET / HTTP/1.0" 400 60012
+[09/Dec/2016 00:05:34] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 00:15:31] "GET / HTTP/1.0" 200 5577
+Not Found: /robots.txt
+[09/Dec/2016 00:39:53] "GET /robots.txt HTTP/1.0" 404 4681
+[09/Dec/2016 00:39:53] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 01:10:25] code 400, message Bad request syntax ('\x00\x9c\x00\x01\x1a+<M\x00\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00')
+[09/Dec/2016 01:10:25] "  +<M              " 400 -
+[09/Dec/2016 01:10:31] code 400, message Bad request syntax ('\x05\x02\x00\x02')
+[09/Dec/2016 01:10:31] " " 400 -
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[09/Dec/2016 01:41:22] "HEAD / HTTP/1.0" 400 60059
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[09/Dec/2016 01:41:22] "GET /clientaccesspolicy.xml HTTP/1.0" 400 60294
+[09/Dec/2016 02:21:13] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 03:32:52] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 03:32:54] "GET /static/img/fakelogo.png HTTP/1.0" 200 135828
+[09/Dec/2016 03:32:54] "GET /static/img/homepagepic.jpg HTTP/1.0" 200 251969
+[09/Dec/2016 03:32:58] "GET /static/img/homepagepic.jpg HTTP/1.0" 200 251969
+[09/Dec/2016 03:32:58] "GET /static/img/fakelogo.png HTTP/1.0" 200 135828
+[09/Dec/2016 04:29:34] "GET / HTTP/1.0" 200 5577
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[09/Dec/2016 04:29:35] "GET / HTTP/1.0" 400 60046
+[09/Dec/2016 04:43:59] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 04:44:06] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 04:44:06] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 05:23:52] "GET / HTTP/1.0" 200 5577
+Invalid HTTP_HOST header: '45.55.236.43:8000'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[09/Dec/2016 07:05:19] "GET / HTTP/1.1" 400 59809
+[09/Dec/2016 10:17:53] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 13:50:07] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+[09/Dec/2016 13:50:07] "    c                           " 400 -
+[09/Dec/2016 14:23:00] "GET / HTTP/1.0" 200 5577
+Not Found: /robots.txt
+[09/Dec/2016 15:03:43] "GET /robots.txt HTTP/1.0" 404 4681
+[09/Dec/2016 15:03:43] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 15:28:00] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 15:59:54] "GET / HTTP/1.0" 200 5577
+Not Found: /Contact.
+[09/Dec/2016 15:59:54] "GET /Contact. HTTP/1.0" 404 4675
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[09/Dec/2016 17:34:17] "GET /cgi/common.cgi HTTP/1.0" 400 60147
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[09/Dec/2016 17:34:18] "GET /stssys.htm HTTP/1.0" 400 60103
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[09/Dec/2016 17:34:19] "GET / HTTP/1.0" 400 59993
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[09/Dec/2016 17:34:19] "POST /command.php HTTP/1.0" 400 60517
+[09/Dec/2016 17:42:13] "GET / HTTP/1.0" 200 5577
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[09/Dec/2016 19:42:42] "GET / HTTP/1.0" 400 60056
+Invalid HTTP_HOST header: 'testp1.piwo.pila.pl'. You may need to add 'testp1.piwo.pila.pl' to ALLOWED_HOSTS.
+[09/Dec/2016 20:54:02] "GET /testproxy.php HTTP/1.0" 400 60788
+Not Found: /robots.txt
+[09/Dec/2016 21:10:22] "GET /robots.txt HTTP/1.0" 404 4681
+[09/Dec/2016 21:10:22] "GET / HTTP/1.0" 200 5577
+[09/Dec/2016 22:02:50] "GET / HTTP/1.0" 200 5577
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[09/Dec/2016 22:06:29] "GET / HTTP/1.0" 400 59906
+[09/Dec/2016 22:23:58] "GET / HTTP/1.0" 200 5577
+Invalid HTTP_HOST header: '45.55.236.43'. You may need to add '45.55.236.43' to ALLOWED_HOSTS.
+[10/Dec/2016 01:25:54] "GET /phpmyadmin HTTP/1.0" 400 60451
+Not Found: /robots.txt
+[10/Dec/2016 01:34:19] "GET /robots.txt HTTP/1.0" 404 4681
+[10/Dec/2016 01:34:21] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 01:34:23] "GET /contact/ HTTP/1.0" 200 3489
+[10/Dec/2016 01:34:24] "GET /add_apartment/ HTTP/1.0" 200 10624
+[10/Dec/2016 01:34:26] "GET /login/ HTTP/1.0" 200 4022
+[10/Dec/2016 01:34:27] "GET /register/ HTTP/1.0" 200 4737
+[10/Dec/2016 02:16:53] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+[10/Dec/2016 02:16:53] "    c                           " 400 -
+Invalid HTTP_HOST header: 'www.baidu.com'. You may need to add 'www.baidu.com' to ALLOWED_HOSTS.
+[10/Dec/2016 03:48:39] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 400 59983
+[10/Dec/2016 04:26:28] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 05:38:16] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 05:52:50] "GET / HTTP/1.0" 200 5577
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/home/rentar/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py", line 159, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Invalid HTTP_HOST header: 'rentar.localdomain:8000'. You may need to add 'rentar.localdomain' to ALLOWED_HOSTS.
+[10/Dec/2016 07:12:08] "GET / HTTP/1.0" 400 59204
+Invalid HTTP_HOST header: '045.055.236.043'. You may need to add '045.055.236.043' to ALLOWED_HOSTS.
+[10/Dec/2016 07:18:14] "GET / HTTP/1.0" 400 60107
+[10/Dec/2016 08:11:45] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 08:11:55] "GET / HTTP/1.0" 200 5577
+Invalid HTTP_HOST header: 'testp1.piwo.pila.pl'. You may need to add 'testp1.piwo.pila.pl' to ALLOWED_HOSTS.
+[10/Dec/2016 09:04:34] "GET /testproxy.php HTTP/1.0" 400 60787
+Invalid HTTP_HOST header: 'www.baidu.com'. You may need to add 'www.baidu.com' to ALLOWED_HOSTS.
+[10/Dec/2016 10:29:02] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 400 59983
+[10/Dec/2016 10:47:52] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+[10/Dec/2016 10:47:52] "    c                           " 400 -
+Not Found: /robots.txt
+[10/Dec/2016 12:18:58] "GET /robots.txt HTTP/1.0" 404 4681
+Not Found: /m/
+[10/Dec/2016 12:18:58] "GET /m/ HTTP/1.0" 404 4657
+[10/Dec/2016 13:53:54] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 13:53:55] "GET /static/img/fakelogo.png HTTP/1.0" 200 135828
+[10/Dec/2016 13:53:55] "GET /static/img/homepagepic.jpg HTTP/1.0" 200 251969
+Not Found: /favicon.ico
+[10/Dec/2016 13:53:55] "GET /favicon.ico HTTP/1.0" 404 4684
+[10/Dec/2016 13:53:57] "GET /contact/ HTTP/1.0" 200 3489
+[10/Dec/2016 13:53:58] "GET /add_apartment/ HTTP/1.0" 200 10624
+[10/Dec/2016 13:53:59] "GET /contact/ HTTP/1.0" 200 3489
+[10/Dec/2016 14:08:16] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:08:30] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:08:31] "GET /static/img/fakelogo.png HTTP/1.0" 200 135828
+[10/Dec/2016 14:08:31] "GET /static/img/homepagepic.jpg HTTP/1.0" 200 251969
+Not Found: /favicon.ico
+[10/Dec/2016 14:08:31] "GET /favicon.ico HTTP/1.0" 404 4684
+[10/Dec/2016 14:09:30] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:09:30] "GET /static/img/fakelogo.png HTTP/1.0" 200 135828
+[10/Dec/2016 14:09:30] "GET /static/img/homepagepic.jpg HTTP/1.0" 200 251969
+Not Found: /favicon.ico
+[10/Dec/2016 14:09:31] "GET /favicon.ico HTTP/1.0" 404 4684
+[10/Dec/2016 14:10:59] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:11:01] "GET /add_apartment/ HTTP/1.0" 200 10624
+[10/Dec/2016 14:11:11] "GET /contact/ HTTP/1.0" 200 3489
+[10/Dec/2016 14:11:14] "GET /add_apartment/ HTTP/1.0" 200 10624
+[10/Dec/2016 14:11:16] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:12:16] "GET /add_apartment/ HTTP/1.0" 200 10624
+[10/Dec/2016 14:48:40] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:48:40] "GET /add_apartment/ HTTP/1.0" 200 10624
+[10/Dec/2016 14:48:42] "GET /contact/ HTTP/1.0" 200 3489
+[10/Dec/2016 14:48:43] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:48:43] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:48:44] "GET /contact/ HTTP/1.0" 200 3489
+[10/Dec/2016 14:48:50] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:48:51] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:48:56] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:48:57] "GET /add_apartment/ HTTP/1.0" 200 10624
+[10/Dec/2016 14:48:58] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:48:59] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:49:00] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:49:04] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:49:05] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:49:17] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:49:19] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:49:26] "GET /contact/ HTTP/1.0" 200 3489
+[10/Dec/2016 14:54:33] "GET / HTTP/1.0" 200 5577
+[10/Dec/2016 14:55:08] "GET /search/?q=buffalo HTTP/1.0" 200 4348
+[10/Dec/2016 15:06:33] "GET /add_apartment/ HTTP/1.0" 200 10624
+[10/Dec/2016 15:06:35] "GET / HTTP/1.0" 200 5577
+Not Found: /mobile/
+[10/Dec/2016 16:02:28] "GET /mobile/ HTTP/1.0" 404 4672
+Invalid HTTP_HOST header: 'www.rentarater.com'. You may need to add 'www.rentarater.com' to ALLOWED_HOSTS.
+[10/Dec/2016 16:29:25] "GET /apartment_view/4/ HTTP/1.0" 400 61922
+Invalid HTTP_HOST header: 'www.rentarater.com'. You may need to add 'www.rentarater.com' to ALLOWED_HOSTS.
+[10/Dec/2016 16:29:27] "GET /favicon.ico HTTP/1.0" 400 61792
+Invalid HTTP_HOST header: 'www.rentarater.com'. You may need to add 'www.rentarater.com' to ALLOWED_HOSTS.
+[10/Dec/2016 16:29:29] "GET / HTTP/1.0" 400 61718
+Invalid HTTP_HOST header: 'www.rentarater.com'. You may need to add 'www.rentarater.com' to ALLOWED_HOSTS.
+[10/Dec/2016 16:29:29] "GET /favicon.ico HTTP/1.0" 400 61775
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 10, 2016 - 16:29:20
+Django version 1.10.4, using settings 'server.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[10/Dec/2016 16:30:40] "GET / HTTP/1.0" 200 5575
+[10/Dec/2016 16:30:40] "GET /static/img/fakelogo.png HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:40] "GET /static/img/homepagepic.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:41] "GET /static/img/fakelogo.png HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:41] "GET /static/img/homepagepic.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:41] "GET /favicon.ico HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:49] "GET / HTTP/1.0" 200 5575
+[10/Dec/2016 16:30:49] "GET /static/img/fakelogo.png HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:50] "GET /static/img/homepagepic.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:50] "GET /static/img/fakelogo.png HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:50] "GET /static/img/homepagepic.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:52] "GET /add_apartment/ HTTP/1.0" 200 13277
+[10/Dec/2016 16:30:52] "GET /static/img/fakelogo.png HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:52] "GET /static/img/neighRate.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:52] "GET /static/img/BedRate.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:52] "GET /static/img/kitchRate.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:53] "GET /static/img/bathRate.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:53] "GET /static/img/fakelogo.png HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:53] "GET /static/img/neighRate.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:53] "GET /static/img/BedRate.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:53] "GET /static/img/kitchRate.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:53] "GET /static/img/bathRate.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:56] "GET / HTTP/1.0" 200 5575
+[10/Dec/2016 16:30:56] "GET /static/img/fakelogo.png HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:56] "GET /static/img/homepagepic.jpg HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:57] "GET /static/img/fakelogo.png HTTP/1.0" 404 3176
+[10/Dec/2016 16:30:57] "GET /static/img/homepagepic.jpg HTTP/1.0" 404 3176

@@ -36,9 +36,30 @@
 
 
     <body>
-       <center><h1>Add Apartment Rating</h1></center>
+       <center><h1><font size="22" color = "#FFA500" >Add Apartment Rating</font></h1></center>
         <div class="container-fluid">
-        <center><button type="button" class="btn btn-info btn-lg" id="addressbtn" data-toggle="modal" data-target="#myModal">Address_ratings</button></center>
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="text-right">
+					<u>Location</u> <br>
+					{{apt_view.address_line}}<br>
+					{{apt_view.city}}, {{apt_view.state}} {{apt_view.zipcode}}
+					</p>
+				</div>
+				<div class="col-sm-6">
+					<u>Landlord</u>
+					<p>
+					Fist name: {{apt_view.landlord_first_name}}<br>
+					Lanst name: {{apt_view.landlord_last_name}}<br>
+					Comapany: {{apt_view.landlord_company}}
+					</p>
+				</div>
+			</div>
+			{% if request.user.is_authenticated %}
+				<center><button type="button" class="btn btn-info btn-lg" id="addressbtn" data-toggle="modal" data-target="#myModal">Add Rating</button></center>
+			{% else %}
+				<center><h3>Please log in to rate apartment</h3></center>
+			{% endif %}
         <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->

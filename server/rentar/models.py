@@ -61,20 +61,20 @@ class Apartment_Rating(models.Model):
 	pet_fee = models.DecimalField(default=0, max_digits=5, decimal_places=2)
 	#ratings
 	#utilities:default=0,
-	water = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	heat = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	electric = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	garbage = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	water = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+	heat = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+	electric = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+	garbage = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
 	#general
-	parking = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	parking = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
 	#changed from privacy
-	neighborhood = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	location = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	neighborhood = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+	location = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
 
-	landlord_hot = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	landlord_privacy = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	landlord_responsiveness = models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
-	landlord_maintenance= models.IntegerField(choices=[(i, i) for i in range(1, 6)], blank=True)
+	landlord_hot = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+	landlord_privacy = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+	landlord_responsiveness = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+	landlord_maintenance= models.IntegerField(choices=[(i, i) for i in range(1, 6)])
 	comment = models.TextField(max_length = 400)
 	def __str__(self):
 	   return str(id)

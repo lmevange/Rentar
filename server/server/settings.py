@@ -25,7 +25,7 @@ SECRET_KEY = '+(k(j%5%(nr5i3-(r(l1@v%mx3d=gbx60_m_36c(8g@wpnte1@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.rentarater.com']
 
 #for flatpages
 SITE_ID=1
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rentar.apps.RentarConfig',
     'crispy_forms',
+    'mathfilters',
 ]
 
 #TEMPLATE_CONTEXT_PROCESSORS = (
